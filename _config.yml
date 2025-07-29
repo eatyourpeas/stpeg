@@ -2,7 +2,7 @@
 title: STPEG
 description: "South Thames Paediatric Endocrine Group - Advancing paediatric endocrinology in South East England"
 baseurl: ""
-url: "https://stpeg.github.io"
+url: "https://eatyourpeas.github.io/stpeg"
 
 # Build settings
 markdown: kramdown
