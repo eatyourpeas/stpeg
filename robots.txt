@@ -1,1 +1,1 @@
-Sitemap: https://github.org/sitemap.xml
+Sitemap: https://stpeg.org/sitemap.xml
