@@ -80,6 +80,13 @@ body {
     margin-bottom: 3rem;
 }
 
+.hero-logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+}
+
 .hero-title {
     font-size: 4rem;
     color: #2980b9;
