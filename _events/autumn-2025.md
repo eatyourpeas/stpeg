@@ -40,7 +40,7 @@ Guy's Hospital
 Great Maze Pond  
 London SE1 9RT
 
-For detailed directions and travel information, please see our [Getting There](../getting-there/) page.
+For detailed directions and travel information, please see our [Getting There](../getting-there.html) page.
 
 ## Meeting Schedule
 

@@ -29,18 +29,18 @@ title: "STPEG - South Thames Paediatric Endocrine Group"
 
 <section class="quick-links">
     <h2>Quick Access</h2>
-    <div class="link-grid">
-        <a href="{{ '/events/' | relative_url }}" class="link-card">
-            <h3>Current Event</h3>
-            <p>View details and book for our upcoming conference</p>
+        <div class="quick-links">
+        <a href="{{ '/events.html' | relative_url }}" class="link-card">
+            <h3>📅 Events</h3>
+            <p>View upcoming meetings and past events</p>
         </a>
-        <a href="{{ '/host-pack/' | relative_url }}" class="link-card">
-            <h3>Host Pack</h3>
-            <p>Resources and guidance for event hosts</p>
+        <a href="{{ '/host-pack.html' | relative_url }}" class="link-card">
+            <h3>📋 Host Pack</h3>
+            <p>Everything you need to host a STPEG meeting</p>
         </a>
-        <a href="{{ '/getting-there/' | relative_url }}" class="link-card">
-            <h3>Getting There</h3>
-            <p>Travel information and directions</p>
+        <a href="{{ '/getting-there.html' | relative_url }}" class="link-card">
+            <h3>🗺️ Getting There</h3>
+            <p>Directions and travel information</p>
         </a>
     </div>
 </section>
