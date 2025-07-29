@@ -27,12 +27,13 @@ To run this site locally:
 
 ## GitHub Pages Deployment
 
-This site is configured to deploy automatically to GitHub Pages via GitHub Actions. The site is available at: <https://eatyourpeas.github.io/stpeg>
+This site is configured to deploy automatically to GitHub Pages via GitHub Actions using the `gh-pages` branch approach. The site is available at: <https://eatyourpeas.github.io/stpeg>
 
 Configuration notes:
 
-- `baseurl: "/stpeg"` in `_config.yml` (matches repository name)
-- `url: "https://eatyourpeas.github.io"` in `_config.yml` (GitHub Pages domain)
+- `baseurl: ""` in `_config.yml` (empty for gh-pages branch deployment)
+- `url: "https://eatyourpeas.github.io/stpeg"` in `_config.yml` (full GitHub Pages URL)
+- GitHub Actions workflow builds to `gh-pages` branch automatically
 
 ## Structure
 
