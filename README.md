@@ -27,12 +27,12 @@ To run this site locally:
 
 ## GitHub Pages Deployment
 
-This site is configured to deploy automatically to GitHub Pages via GitHub Actions using the `gh-pages` branch approach. The site is available at: <https://github.org>
+This site is configured to deploy automatically to GitHub Pages via GitHub Actions using the `gh-pages` branch approach. The site is available at: <https://stpeg.org>
 
 Configuration notes:
 
 - `baseurl: ""` in `_config.yml` (empty for custom domain deployment)
-- `url: "https://github.org"` in `_config.yml` (custom domain)
+- `url: "https://stpeg.org"` in `_config.yml` (custom domain)
 - `CNAME` file contains the custom domain name
 - GitHub Actions workflow builds to `gh-pages` branch automatically
 

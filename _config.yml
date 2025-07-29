@@ -2,7 +2,7 @@
 title: STPEG
 description: "South Thames Paediatric Endocrine Group - Advancing paediatric endocrinology in South East England"
 baseurl: ""
-url: "https://github.org"
+url: "https://stpeg.org"
 
 # Build settings
 markdown: kramdown
