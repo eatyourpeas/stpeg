@@ -22,12 +22,21 @@ To run this site locally:
 1. Install Ruby and Bundler
 2. Clone this repository
 3. Run `bundle install`
-4. Run `bundle exec jekyll serve`
+4. Run `bundle exec jekyll serve --baseurl=""` (note: empty baseurl for local development)
 5. Visit `http://localhost:4000`
+
+## GitHub Pages Deployment
+
+This site is configured to deploy automatically to GitHub Pages via GitHub Actions. The site is available at: <https://eatyourpeas.github.io/stpeg>
+
+Configuration notes:
+
+- `baseurl: "/stpeg"` in `_config.yml` (matches repository name)
+- `url: "https://eatyourpeas.github.io"` in `_config.yml` (GitHub Pages domain)
 
 ## Structure
 
-```
+```text
 ├── _config.yml          # Jekyll configuration
 ├── _layouts/            # Page templates
 ├── _events/             # Event content (markdown)
