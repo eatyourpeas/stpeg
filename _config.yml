@@ -1,0 +1,50 @@
+# Site settings
+title: STPEG
+description: "South Thames Paediatric Endocrine Group - Advancing paediatric endocrinology in South East England"
+baseurl: ""
+url: "https://stpeg.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Collections
+collections:
+  events:
+    output: true
+    permalink: /events/:name/
+  speakers:
+    output: true
+    permalink: /speakers/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "event"
+  - scope:
+      path: ""
+      type: "speakers"
+    values:
+      layout: "speaker"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+  - _utils/

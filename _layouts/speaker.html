@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<article class="speaker">
+    <header class="speaker-header">
+        <h1>{{ page.name }}</h1>
+        {% if page.title %}
+        <p class="speaker-title">{{ page.title }}</p>
+        {% endif %}
+        {% if page.hospital %}
+        <p class="speaker-hospital">{{ page.hospital }}</p>
+        {% endif %}
+    </header>
+
+    <div class="speaker-content">
+        {{ content }}
+    </div>
+
+    {% if page.specialties %}
+    <section class="speaker-specialties">
+        <h3>Areas of Expertise</h3>
+        <ul>
+            {% for specialty in page.specialties %}
+            <li>{{ specialty }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+</article>
