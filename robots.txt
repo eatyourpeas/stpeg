@@ -1,1 +1,1 @@
-Sitemap: https://eatyourpeas.github.io/stpeg/sitemap.xml
+Sitemap: https://github.org/sitemap.xml
