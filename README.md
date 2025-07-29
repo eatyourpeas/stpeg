@@ -31,8 +31,8 @@ This site is configured to deploy automatically to GitHub Pages via GitHub Actio
 
 Configuration notes:
 
-- `baseurl: ""` in `_config.yml` (empty for gh-pages branch deployment)
-- `url: "https://eatyourpeas.github.io/stpeg"` in `_config.yml` (full GitHub Pages URL)
+- `baseurl: "/stpeg"` in `_config.yml` (matches repository name for proper URL prefixing)
+- `url: "https://eatyourpeas.github.io"` in `_config.yml` (GitHub Pages domain)
 - GitHub Actions workflow builds to `gh-pages` branch automatically
 
 ## Structure

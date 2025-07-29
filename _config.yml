@@ -1,8 +1,8 @@
 # Site settings
 title: STPEG
 description: "South Thames Paediatric Endocrine Group - Advancing paediatric endocrinology in South East England"
-baseurl: ""
-url: "https://eatyourpeas.github.io/stpeg"
+baseurl: "/stpeg"
+url: "https://eatyourpeas.github.io"
 
 # Build settings
 markdown: kramdown
