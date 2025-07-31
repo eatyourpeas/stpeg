@@ -7,7 +7,7 @@ host_name: "To be announced"
 host_hospital: "To be announced"
 is_current: true
 calendar_link: "#"
-eventbrite_link: "#"
+eventbrite_link: "https://www.eventbrite.co.uk/e/1542862837279?aff=oddtdtcreator"
 schedule: []
 sponsors: []
 acknowledgements: ""
