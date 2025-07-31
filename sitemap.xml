@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://stpeg.org/events/spring-2024/</loc>
-<lastmod>2024-04-12T00:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://stpeg.org/events/autumn-2024/</loc>
-<lastmod>2024-10-18T00:00:00+00:00</lastmod>
-</url>
-<url>
 <loc>https://stpeg.org/events/spring-2025/</loc>
 <lastmod>2025-04-25T00:00:00+00:00</lastmod>
 </url>
@@ -18,23 +10,23 @@
 </url>
 <url>
 <loc>https://stpeg.org/speakers/emma-wilson/</loc>
-<lastmod>2025-07-29T18:38:31+00:00</lastmod>
+<lastmod>2025-07-31T22:14:43+00:00</lastmod>
 </url>
 <url>
 <loc>https://stpeg.org/speakers/james-roberts/</loc>
-<lastmod>2025-07-29T18:38:31+00:00</lastmod>
+<lastmod>2025-07-31T22:14:43+00:00</lastmod>
 </url>
 <url>
 <loc>https://stpeg.org/speakers/lisa-brown/</loc>
-<lastmod>2025-07-29T18:38:31+00:00</lastmod>
+<lastmod>2025-07-31T22:14:43+00:00</lastmod>
 </url>
 <url>
 <loc>https://stpeg.org/speakers/michael-thompson/</loc>
-<lastmod>2025-07-29T18:38:31+00:00</lastmod>
+<lastmod>2025-07-31T22:14:43+00:00</lastmod>
 </url>
 <url>
 <loc>https://stpeg.org/speakers/sarah-johnson/</loc>
-<lastmod>2025-07-29T18:38:31+00:00</lastmod>
+<lastmod>2025-07-31T22:14:43+00:00</lastmod>
 </url>
 <url>
 <loc>https://stpeg.org/host-pack/cases.html</loc>
