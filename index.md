@@ -4,11 +4,15 @@ title: "STPEG - South Thames Paediatric Endocrine Group"
 ---
 
 <div class="hero-section">
-    <div class="hero-header">
-        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="STPEG Logo" class="hero-logo">
-        <h1 class="hero-title">STPEG</h1>
+    <div class="hero-grid">
+        <div class="hero-logo-container">
+            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="STPEG Logo" class="hero-logo">
+        </div>
+        <div class="hero-text-container">
+            <h1 class="hero-title">STPEG</h1>
+            <p class="hero-subtitle">South Thames Paediatric Endocrine Group</p>
+        </div>
     </div>
-    <p class="hero-subtitle">South Thames Paediatric Endocrine Group</p>
 </div>
 
 <section class="about-section">
@@ -34,15 +38,15 @@ title: "STPEG - South Thames Paediatric Endocrine Group"
     <h2>Quick Access</h2>
     <div class="link-grid">
         <a href="{{ '/events.html' | relative_url }}" class="link-card">
-            <h3>📅 Events</h3>
+            <h3><i class="fa-solid fa-calendar-days icon"></i>Events</h3>
             <p>View upcoming meetings and past events</p>
         </a>
         <a href="{{ '/host-pack.html' | relative_url }}" class="link-card">
-            <h3>📋 Host Pack</h3>
+            <h3><i class="fa-solid fa-clipboard-list icon"></i>Host Pack</h3>
             <p>Everything you need to host a STPEG meeting</p>
         </a>
         <a href="{{ '/getting-there.html' | relative_url }}" class="link-card">
-            <h3>🗺️ Getting There</h3>
+            <h3><i class="fa-solid fa-map-location-dot icon"></i>Getting There</h3>
             <p>Directions and travel information</p>
         </a>
     </div>

@@ -2,63 +2,63 @@
 layout: default
 ---
 
-<article class="event">
+<article class="event-page">
     <header class="event-header">
         <h1>{{ page.title }}</h1>
-        <div class="event-meta">
-            <div class="event-datetime">
-                <strong>{{ page.date | date: "%A, %B %d, %Y" }}</strong><br>
-                <strong>{{ page.time }}</strong>
-            </div>
-            <div class="event-location">
-                <strong>{{ page.location }}</strong><br>
-                <em>Hosted by {{ page.host_name }}, {{ page.host_hospital }}</em>
-            </div>
-            {% if page.is_current == "true" %}
-            <div class="event-actions">
-                <a href="{{ page.calendar_link }}" class="btn btn-primary">📅 Save to Calendar</a>
-                <a href="{{ page.eventbrite_link }}" class="btn btn-secondary">🎟️ Book on Eventbrite</a>
-            </div>
+        <p class="event-date">{{ page.date | date: "%A, %B %d, %Y" }}</p>
+        
+        <div class="event-details">
+            <p class="event-location"><strong>Location:</strong> {{ page.location }}</p>
+            {% if page.host_name %}
+                <p class="event-host"><strong>Host:</strong> {{ page.host_name }}, {{ page.host_hospital }}</p>
             {% endif %}
         </div>
-        {% if page.is_current %}
-        <div class="welcome-message">
-            <p><strong>{{ page.host_name }}</strong> from <strong>{{ page.host_hospital }}</strong> welcomes colleagues to this STPEG event.</p>
+
+        {% if page.is_current == "true" %}
+        <div class="event-actions">
+            {% if page.calendar_link and page.calendar_link != "#" %}
+            <a href="{{ page.calendar_link }}" class="btn btn-primary"><i class="fa-solid fa-calendar-plus"></i> Add to Calendar</a>
+            {% endif %}
+            {% if page.eventbrite_link %}
+            <a href="{{ page.eventbrite_link }}" class="btn btn-secondary"><i class="fa-solid fa-ticket"></i> Register on Eventbrite</a>
+            {% endif %}
         </div>
         {% endif %}
     </header>
 
-    <div class="event-content">
-        {{ content }}
-    </div>
-
-    {% if page.schedule %}
-    <section class="schedule">
-        <h2>Programme</h2>
-        <div class="schedule-table">
-            {% for item in page.schedule %}
-            <div class="schedule-item">
-                <div class="schedule-time">{{ item.time }}</div>
-                <div class="schedule-content">
-                    <strong>{{ item.title }}</strong>
-                    {% if item.speaker %}
-                    <br><em>
-                        {% if item.speaker_link %}
-                        <a href="{{ item.speaker_link | relative_url }}">{{ item.speaker }}</a>
-                        {% else %}
-                        {{ item.speaker }}
-                        {% endif %}
-                    </em>
-                    {% endif %}
-                    {% if item.description %}
-                    <br><small>{{ item.description }}</small>
-                    {% endif %}
-                </div>
-            </div>
-            {% endfor %}
+    <div class="event-content-wrapper">
+        <div class="event-content">
+            {{ content }}
         </div>
-    </section>
-    {% endif %}
+
+        {% if page.schedule %}
+        <section class="schedule">
+            <h2>Programme</h2>
+            <div class="schedule-table">
+                {% for item in page.schedule %}
+                <div class="schedule-item">
+                    <div class="schedule-time">{{ item.time }}</div>
+                    <div class="schedule-content">
+                        <strong>{{ item.title }}</strong>
+                        {% if item.speaker %}
+                        <br><em>
+                            {% if item.speaker_link %}
+                            <a href="{{ item.speaker_link | relative_url }}">{{ item.speaker }}</a>
+                            {% else %}
+                            {{ item.speaker }}
+                            {% endif %}
+                        </em>
+                        {% endif %}
+                        {% if item.description %}
+                        <br><small>{{ item.description }}</small>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+    </div>
 
     {% if page.sponsors or page.acknowledgements %}
     <section class="sponsors">

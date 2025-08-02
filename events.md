@@ -20,8 +20,8 @@ title: Events
         <p><strong>{{ current_event.location }}</strong></p>
         <p>Hosted by {{ current_event.host_name }}, {{ current_event.host_hospital }}</p>
         <div class="event-actions">
-            <a href="{{ current_event.calendar_link }}" class="btn btn-primary">📅 Save to Calendar</a>
-            <a href="{{ current_event.eventbrite_link }}" class="btn btn-secondary">🎟️ Book on Eventbrite</a>
+            <a href="{{ current_event.calendar_link }}" class="btn btn-primary"><i class="fa-solid fa-calendar-plus"></i> Save to Calendar</a>
+            <a href="{{ current_event.eventbrite_link }}" class="btn btn-secondary"><i class="fa-solid fa-ticket"></i> Book on Eventbrite</a>
         </div>
     </div>
 </div>
@@ -37,8 +37,9 @@ title: Events
     {% for event in past_events %}
     <div class="past-event-card">
         <div class="past-event-banner">
-            <h3><a href="{{ event.url | relative_url }}">{{ event.date | date: "%B %Y" }}</a></h3>
-            <p>{{ event.location }}</p>
+            <h3><a href="{{ event.url | relative_url }}">{{ event.title }}</a></h3>
+            <p>{{ event.date | date: "%B %Y" }}</p>
+            <p><small>{{ event.location }}</small></p>
         </div>
     </div>
     {% endfor %}

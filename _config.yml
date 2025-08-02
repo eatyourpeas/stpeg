@@ -17,6 +17,9 @@ collections:
   speakers:
     output: true
     permalink: /:collection/:name/
+  meeting_minutes:
+    output: true
+    permalink: /:collection/:name/
 
 # Defaults
 defaults:
@@ -35,6 +38,11 @@ defaults:
       type: "speakers"
     values:
       layout: "speaker"
+  - scope:
+      path: ""
+      type: "meeting_minutes"
+    values:
+      layout: "meeting_minute"
 
 # Plugins
 plugins:
