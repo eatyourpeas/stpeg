@@ -13,10 +13,10 @@ theme: minima
 collections:
   events:
     output: true
-    permalink: /events/:name/
+    permalink: /:collection/:name/
   speakers:
     output: true
-    permalink: /speakers/:name/
+    permalink: /:collection/:name/
 
 # Defaults
 defaults:

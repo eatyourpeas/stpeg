@@ -14,7 +14,7 @@ layout: default
                 <strong>{{ page.location }}</strong><br>
                 <em>Hosted by {{ page.host_name }}, {{ page.host_hospital }}</em>
             </div>
-            {% if page.is_current %}
+            {% if page.is_current == "true" %}
             <div class="event-actions">
                 <a href="{{ page.calendar_link }}" class="btn btn-primary">📅 Save to Calendar</a>
                 <a href="{{ page.eventbrite_link }}" class="btn btn-secondary">🎟️ Book on Eventbrite</a>

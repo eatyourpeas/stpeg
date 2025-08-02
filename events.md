@@ -5,7 +5,13 @@ title: Events
 
 # Current Event
 
-{% assign current_event = site.events | where: "is_current", true | first %}
+<!-- Debug: Let's see all event URLs -->
+{% for event in site.events %}
+  Event: {{ event.title }} - URL: {{ event.url }} - is_current: {{ event.is_current }}
+{% endfor %}
+
+{% assign current_event = site.events | where: "is_current", "true" | first %}
+
 {% if current_event %}
 <div class="current-event-card">
     <h2><a href="{{ current_event.url | relative_url }}">{{ current_event.title }}</a></h2>
@@ -25,7 +31,7 @@ title: Events
 
 # Previous Events
 
-{% assign past_events = site.events | where: "is_current", false | sort: "date" | reverse %}
+{% assign past_events = site.events | where: "is_current", "false" | sort: "date" | reverse %}
 {% if past_events.size > 0 %}
 <div class="past-events">
     {% for event in past_events %}

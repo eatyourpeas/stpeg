@@ -5,7 +5,7 @@ time: "2:30 PM - 9:00 PM"
 location: "Robens Suite, 29th Floor, Tower Wing, Guy's Hospital, Great Maze Pond, London, SE1 9RT"
 host_name: "Dr Aileen Alston and Dr Aruna Goturu"
 host_hospital: "Epsom and St Helier University Hospitals NHS Trust"
-is_current: false
+is_current: "false"
 calendar_link: "#"
 eventbrite_link: "#"
 schedule:
@@ -64,9 +64,9 @@ sponsors:
   - name: "Merck Serono"
     logo: "/assets/images/merck-logo.png"
   - name: "Neurocrine"
-    logo: "/assets/images/neurocrine-logo.png"
+    logo: "/assets/images/neurocrine-logo.jpg"
   - name: "Novo Nordisk"
-    logo: "/assets/images/novo-nordisk-logo.png"
+    logo: "/assets/images/novo-nordisk-logo.jpg"
 acknowledgements: "This meeting is multi-sponsored kindly by Merck Serono, Neurocrine, Novo Nordisk in exchange for stand space. The sponsors have no influence on the academic agenda."
 ---
 
