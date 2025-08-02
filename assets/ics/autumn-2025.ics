@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//STPEG//NONSGML v1.0//EN
+BEGIN:VEVENT
+UID:stpeg-autumn-2025@stpeg.org
+DTSTAMP:20250802T120000Z
+DTSTART:20250425T143000
+DTEND:20250425T210000
+SUMMARY:STPEG Autumn Meeting 2025
+LOCATION:Robens Suite, 29th Floor, Tower Wing, Guy's Hospital, Great Maze Pond, London, SE1 9RT
+DESCRIPTION:Join us for the STPEG Autumn Meeting 2025. This event brings together paediatric trainees, SAS, and paediatric consultants with special interest in endocrinology/diabetes from across the South Thames region.
+END:VEVENT
+END:VCALENDAR
