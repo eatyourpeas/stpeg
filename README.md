@@ -91,9 +91,25 @@ specialties:
 Biography in markdown...
 ```
 
+### Custom Ruby Gem
+
+The `_plugins` folder contains a custom `_ics_generator.rb` which generates a `.ics` file for the active event and stores this in the `ics` folder. It adds the link to the event automatically
+
 ## Deployment
 
 The site automatically deploys to GitHub Pages when changes are pushed to the main branch via GitHub Actions.
+
+## Creating a new event
+
+1. Create an event on EventBrite and in the events draft view, click on the 3 dots to the right of the event in the list and select `copy link`.
+2. Create a new event in the `_events` folder using the same naming as previous events. You can cut and paste from previous events as a starter
+3. In the yaml at the start of the file paste the link from above into the `eventbrite_link` element.
+4. On deploy, the `.ics` and eventbrite links should work
+
+## Adding a new committee minute
+
+1. add a new date above the previous dates in `committee.md`
+2. create a corresponding file in `_meeting_minutes`.  
 
 ## License
 

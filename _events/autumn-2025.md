@@ -7,7 +7,7 @@ host_name: "Dr Charlotte Jackson"
 host_hospital: "Kingston Hospital"
 is_current: "true"
 calendar_link: "#"
-eventbrite_link: "#"
+eventbrite_link: "https://www.eventbrite.co.uk/e/1542862837279?aff=oddtdtcreator"
 schedule:
   - time: "14:30-14:55"
     title: "Registration and Coffee/Tea and networking and Stand tours"
