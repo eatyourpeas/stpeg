@@ -57,7 +57,7 @@
                 <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
                 <div class="footer-meta">
                     <p>Last updated: {{ site.time | date: "%B %d, %Y" }}</p>
-                    <p>Build: <code>{{ site.github.build_revision | slice: 0, 7 }}</code></p>
+                    <p>Build: <code>{% if site.github.build_revision %}{{ site.github.build_revision | slice: 0, 7 }}{% else %}{{ site.git_revision }}{% endif %}</code></p>
                 </div>
             </div>
         </div>
