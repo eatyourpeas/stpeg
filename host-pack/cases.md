@@ -48,3 +48,4 @@ This page provides a schedule template for case presentations during the STPEG c
 - Treatment failures or complications
 
 *Note: All cases must be fully anonymized and comply with patient confidentiality requirements.*
+*Note: Include a disclosure statement.*
