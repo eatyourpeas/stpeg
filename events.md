@@ -5,11 +5,6 @@ title: Events
 
 # Current Event
 
-<!-- Debug: Let's see all event URLs -->
-{% for event in site.events %}
-  Event: {{ event.title }} - URL: {{ event.url }} - is_current: {{ event.is_current }}
-{% endfor %}
-
 {% assign current_event = site.events | where: "is_current", "true" | first %}
 
 {% if current_event %}
