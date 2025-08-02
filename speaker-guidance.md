@@ -5,22 +5,30 @@ title: Speaker Guidance
 
 # Speaker Guidance
 
-<div class="disabled-notice">
-    <p><em>This section is currently under development and will be available soon.</em></p>
-</div>
+## Case Selection
 
-## Coming Soon
+Please work with your lead consultant +/- regional endocrinology lead to select a suitable subject to present. Successful presentations include:
 
-This page will contain comprehensive guidance for STPEG speakers, including:
+- Rare presentations of common paediatric endocrine problems
+- Unusual paediatric endocrine problems
+- Children with endocrine abnormalities presenting to other specialties with symptoms masquerading as something else
 
-- Presentation guidelines and format requirements
-- Technical specifications for slides and equipment
-- Travel and accommodation information
-- Contact details for event coordination
-- Tips for effective presentations
-- Q&A session management
+## Top Tips and General Style
 
-Please check back soon for updates, or contact the event organizers directly for immediate assistance.
+Presenting a case should take in 3 stages. 
+
+1. Title with acknowledgements - hospital(s) and clinician(s) involved
+2. Disclosure statement if applicable
+3. Case presentation
+4. Outcome
+5. (Brief) review of the topic
+
+- Don't give the answer away in the title! This is a learning exercise for everyone, so tell an engaging story leading towards a conclusion.
+- Stories that are presented need a conclusion and a learning point. If answers are not yet fully known, focus on some aspect of learning that the audience can take away. You can misdirect but not mislead.
+- Begin with the case presentation, with key information only. Include important investigations / growth charts - slides should not be too crowded. Leave time for the audience to digest the information - remember they will be hearing it for the first time.
+- Once the reveal is made, don't leave the audience wondering. What happened next? If any treatment has been started or referral made, what is the outcome so far?
+- Summary of the topic - do not assume the audience know it all. Focus particularly on the aspects of the topic highlighted by the case presentation
+- **keep to time** - there will be time for one or two questions only. STPEG prioritizes the cases and there are a lot to get though, so practice beforehand, keep it concise and leave with a clear message or learning point.
 
 ---
 

@@ -66,51 +66,36 @@ sponsors:
 acknowledgements: "This meeting is multi-sponsored kindly by Merck Serono, Neurocrine, Novo Nordisk in exchange for stand space. The sponsors have no influence on the academic agenda."
 ---
 
-## STPEG Autumn Meeting 2025
+Join us for the STPEG Spring Meeting 2025 at Guy's Hospital, London. This afternoon and evening event brings together paediatric trainees, SAS, and paediatric consultants with special interest in endocrinology/diabetes from across the South Thames region.
 
-**Date:** Friday, October 10th, 2025 (2nd Friday in October)  
-**Venue:** Robens Suite, 29th Floor, Tower Wing, Guy's Hospital  
-**Address:** Great Maze Pond, London, SE1 9RT
+## About This Event
 
-We are currently planning our Autumn 2025 meeting at our regular venue. Details to be announced include:
+**Learning Aim:** This study-day helps delegates develop an approach to manage paediatric endocrine conditions.
 
-- Programme and speakers  
-- Registration information
-- Exact timing and schedule
-- Host details
+Our Spring 2025 meeting takes place on the 29th floor of Guy's Hospital with stunning views over London. The event features:
 
-## Save the Date
+- Expert presentations on Silver Russell syndrome and congenital hypopituitarism
+- Interactive case presentations from trainees and registrars across the region
+- Networking opportunities with colleagues
+- Industry exhibition stands
+- Evening drinks reception and dinner
 
-Please save **Friday, October 10th, 2025** in your diary for our next STPEG meeting at Guy's Hospital.
+## Target Audience
 
-## Venue
+- Paediatric trainees
+- Specialty doctors (SAS)
+- Paediatric consultants with special interest in endocrinology/diabetes
+- Healthcare professionals in paediatric endocrinology
 
-All STPEG meetings are held at the **Robens Suite** on the 29th floor of the Tower Wing at Guy's Hospital, offering spectacular views across London and excellent facilities for our educational programme.
+## Venue Details
 
-**Address:**  
-Robens Suite, 29th Floor, Tower Wing  
+**Robens Suite, 29th Floor, Tower Wing**  
 Guy's Hospital  
 Great Maze Pond  
 London SE1 9RT
 
-For detailed directions and travel information, please see our [Getting There](../getting-there.html) page.
+The venue offers spectacular views of London and excellent facilities for our educational programme.
 
-## Meeting Schedule
+## Accreditation
 
-STPEG meetings follow a regular biannual schedule:
-- **Spring meetings:** 4th Friday in April
-- **Autumn meetings:** 2nd Friday in October
-
-## Updates
-
-Please check back regularly for updates on:
-- Venue confirmation
-- Speaker announcements
-- Registration opening
-- Programme details
-
-For any inquiries about the upcoming meeting, please contact the STPEG organizing committee.
-
----
-
-*This page will be updated as details become available.*
+This event provides continuing professional development for all attendees. Certificates of attendance will be available.
