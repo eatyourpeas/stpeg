@@ -19,31 +19,12 @@ This section provides comprehensive guidance for STPEG event hosts, covering all
 
 ## Preparation
 
-### Initial Planning (8-12 weeks before)
-
-- [ ] Confirm venue booking and capacity
-- [ ] Set date and time for the event
-- [ ] Identify and confirm keynote speakers
-- [ ] Create event programme outline
-- [ ] Set up Eventbrite booking system
-- [ ] Arrange catering (registration coffee, lunch, afternoon tea)
-- [ ] Book AV equipment and IT support
-
-### Venue Preparation (6-8 weeks before)
-
-- [ ] Confirm room layout and seating arrangements
-- [ ] Test all audio-visual equipment
-- [ ] Arrange parking information for delegates
-- [ ] Prepare venue accessibility information
-- [ ] Coordinate with venue security for access
-- [ ] Arrange signage for event areas
-
 ### Speaker Coordination (4-6 weeks before)
 
-- [ ] Send speaker pack with guidelines and requirements
+- [ ] Identify cases
+- [ ] Set schedule for cases
 - [ ] Collect presentation slides and bios
 - [ ] Confirm speaker requirements (AV, dietary, travel)
-- [ ] Schedule speaker rehearsal if needed
 - [ ] Prepare speaker introductions
 
 ### Communication (2-4 weeks before)
@@ -59,7 +40,6 @@ This section provides comprehensive guidance for STPEG event hosts, covering all
 - [ ] Confirm final delegate numbers with catering
 - [ ] Print name badges and registration materials
 - [ ] Prepare welcome packs and materials
-- [ ] Test all presentation equipment
 - [ ] Brief support staff and volunteers
 - [ ] Prepare certificates of attendance
 
@@ -73,8 +53,6 @@ This section provides comprehensive guidance for STPEG event hosts, covering all
 - [ ] Test all AV equipment one final time
 - [ ] Arrange welcome refreshments
 - [ ] Position directional signage
-- [ ] Brief reception and support staff
-- [ ] Prepare speaker green room area
 
 ### Registration Period
 
