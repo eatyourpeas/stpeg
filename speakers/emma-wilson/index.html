@@ -35,7 +35,10 @@
                 </span>
             </a>
             <nav class="site-nav">
-                <ul>
+                <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="nav-list">
                     <li><a href="/events.html">Events</a></li>
                     <li><a href="/getting-there.html">Getting There</a></li>
                     <li class="nav-divider"></li>
@@ -103,10 +106,21 @@
                 <p>&copy; 2025 STPEG. All rights reserved.</p>
                 <div class="footer-meta">
                     <p>Last updated: August 03, 2025</p>
-                    <p>Build: <code>04c1061</code></p>
+                    <p>Build: <code>13af89a</code></p>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            navList.classList.toggle('nav-open');
+        });
+    </script>
 </body>
 </html>
