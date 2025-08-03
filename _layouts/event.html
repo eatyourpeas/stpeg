@@ -22,16 +22,18 @@ layout: default
             {% if page.eventbrite_link %}
             <a href="{{ page.eventbrite_link }}" class="btn btn-secondary"><i class="fa-solid fa-ticket"></i> Register on Eventbrite</a>
             {% endif %}
+            <button id="download-pdf" class="btn btn-tertiary"><i class="fa-solid fa-file-pdf"></i> Download Programme</button>
         </div>
         {% endif %}
     </header>
 
-    <div class="event-content-wrapper">
+    <div class="event-content-wrapper" id="programme-content">
         <div class="event-content">
             {{ content }}
         </div>
 
         {% if page.schedule %}
+        <div class="html2pdf__page-break"></div>
         <section class="schedule">
             <h2>Programme</h2>
             <div class="schedule-table">
@@ -76,3 +78,18 @@ layout: default
     </section>
     {% endif %}
 </article>
+
+<script>
+document.getElementById('download-pdf').addEventListener('click', function () {
+    const element = document.getElementById('programme-content');
+    const eventTitle = "{{ page.title | slugify }}";
+    const opt = {
+        margin:       [0.5, 0.5, 0.5, 0.5],
+        filename:     `${eventTitle}-programme.pdf`,
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+    html2pdf().from(element).set(opt).save();
+});
+</script>
