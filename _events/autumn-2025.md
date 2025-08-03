@@ -39,7 +39,7 @@ schedule:
     speaker: ""
     description: ""
   - time: "18:00"
-    title: "TBC title – case presentation"
+    title: "Case: to be announced"
     speaker: ""
     description: ""
   - time: "18:20"
