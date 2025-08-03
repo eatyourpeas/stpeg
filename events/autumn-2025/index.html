@@ -15,6 +15,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- html2pdf.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
@@ -67,11 +70,12 @@
             
             <a href="https://www.eventbrite.co.uk/e/1542862837279?aff=oddtdtcreator" class="btn btn-secondary"><i class="fa-solid fa-ticket"></i> Register on Eventbrite</a>
             
+            <button id="download-pdf" class="btn btn-tertiary"><i class="fa-solid fa-file-pdf"></i> Download Programme</button>
         </div>
         
     </header>
 
-    <div class="event-content-wrapper">
+    <div class="event-content-wrapper" id="programme-content">
         <div class="event-content">
             <p>Join us for the STPEG Autumn Meeting 2025 at Guy’s Hospital, London. This afternoon and evening event brings together paediatric trainees, SAS, and paediatric consultants with special interest in endocrinology/diabetes from across the South Thames region.</p>
 
@@ -114,6 +118,7 @@ London SE1 9RT</p>
         </div>
 
         
+        <div class="html2pdf__page-break"></div>
         <section class="schedule">
             <h2>Programme</h2>
             <div class="schedule-table">
@@ -343,6 +348,21 @@ London SE1 9RT</p>
     
 </article>
 
+<script>
+document.getElementById('download-pdf').addEventListener('click', function () {
+    const element = document.getElementById('programme-content');
+    const eventTitle = "stpeg-autumn-meeting-2025";
+    const opt = {
+        margin:       [0.5, 0.5, 0.5, 0.5],
+        filename:     `${eventTitle}-programme.pdf`,
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+    html2pdf().from(element).set(opt).save();
+});
+</script>
+
         </div>
     </main>
 
@@ -351,8 +371,8 @@ London SE1 9RT</p>
             <div class="footer-content">
                 <p>&copy; 2025 STPEG. All rights reserved.</p>
                 <div class="footer-meta">
-                    <p>Last updated: August 02, 2025</p>
-                    <p>Build: <code>6714c8f</code></p>
+                    <p>Last updated: August 03, 2025</p>
+                    <p>Build: <code>04c1061</code></p>
                 </div>
             </div>
         </div>
