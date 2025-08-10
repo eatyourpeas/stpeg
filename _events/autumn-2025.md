@@ -1,6 +1,6 @@
 ---
 title: "STPEG Autumn Meeting 2025"
-date: 2025-04-25
+date: 2025-10-10
 time: "2:30 PM - 9:00 PM"
 location: "Robens Suite, 29th Floor, Tower Wing, Guy's Hospital, Great Maze Pond, London, SE1 9RT"
 host_name: "Dr Charlotte Jackson"
