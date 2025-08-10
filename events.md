@@ -32,9 +32,12 @@ title: Events
 # Previous Events
 
 {%- comment -%}
-List all events in the past by date, excluding the current/upcoming event. This works even if is_current is missing or boolean/string.
+List all events in the past by date, excluding the current/upcoming event.
+Avoid complex boolean logic in a single where_exp by splitting into steps.
 {%- endcomment -%}
-{% assign past_events = site.events | where_exp: "e", "e.date and (current_event == nil or e.url != current_event.url) and e.date < site.time" | sort: "date" | reverse %}
+{% assign not_current_events = site.events | where_exp: "e", "current_event == nil or e.url != current_event.url" %}
+{% assign dated_past_events = not_current_events | where_exp: "e", "e.date and e.date < site.time" | sort: "date" | reverse %}
+{% assign past_events = dated_past_events %}
 {% if past_events.size > 0 %}
 <div class="past-events">
     {% for event in past_events %}
