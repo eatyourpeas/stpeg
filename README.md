@@ -75,6 +75,51 @@ schedule:
 Event description in markdown...
 ```
 
+#### Steps
+
+Follow these steps to add a new event that builds its own page and appears in the listings.
+
+##### 1. Name the file (controls the URL)
+
+In the `_events/` folder, create a new markdown file named like `spring-2026.md` or `autumn-2026.md`.
+The URL will be `/events/<filename-without-extension>/` (e.g. `spring-2026.md` → `/events/spring-2026/`).
+Changing the event date later will NOT change the URL.
+
+##### 2. Start from the template
+
+Open `_utils/event-template.md` and copy the YAML front‑matter and content skeleton into your new file.
+
+##### 3. Fill out the YAML front‑matter
+
+Required fields and guidance:
+
+- `title`: A clear event title.
+- `date`: In `YYYY-MM-DD` format. Convention: Spring = 4th Friday in April; Autumn = 2nd Friday in October.
+- `time`: Either a range like `"14:30 - 21:00"` or `"2:30 PM - 9:00 PM"`. A single start time also works.
+- `location`: Full venue details.
+- `host_name`, `host_hospital`: Host info for the event.
+- `is_current`: Set to `true` (boolean, no quotes) for the upcoming event; set previous events to `false`. The site also accepts quoted strings, but booleans are recommended.
+- `eventbrite_link` (optional but recommended): Paste the Eventbrite link. In Eventbrite, open your event’s draft list, click the three dots, and select “Copy link”.
+- `calendar_link`: Leave as `#` or omit. The site will auto‑generate an `.ics` link for the current event during the build.
+- `schedule`: Add programme items. You can include optional `speaker_link` fields that point to speaker pages (e.g., `/speakers/jane-doe`).
+
+##### 4. Add the page content
+
+Below the YAML, add a brief event description, highlights, and any notes attendees should know.
+
+##### 5. Commit and push
+
+Commit the new file to `main`. The site will build and:
+
+- Publish the event at `/events/<filename>/`.
+- Highlight the event on `/events.html` if `is_current: true`.
+- Generate an `.ics` file for the current event at `/assets/ics/<filename>.ics` and link it automatically.
+
+##### 6. Optional checks
+
+- Ensure previous events have `is_current: false` so only one current event is highlighted.
+- If you add new speakers, place their pages under `_speakers/` and reference them from the event `schedule` using `speaker_link`.
+
 ### New Speakers
 
 Create a new file in `_speakers/` with:
@@ -99,12 +144,14 @@ The `_plugins` folder contains a custom `_ics_generator.rb` which generates a `.
 
 The site automatically deploys to GitHub Pages when changes are pushed to the main branch via GitHub Actions.
 
-## Creating a new event
+## Creating a New Event on EventBrite
 
-1. Create an event on EventBrite and in the events draft view, click on the 3 dots to the right of the event in the list and select `copy link`.
-2. Create a new event in the `_events` folder using the same naming as previous events. You can cut and paste from previous events as a starter
-3. In the yaml at the start of the file paste the link from above into the `eventbrite_link` element.
-4. On deploy, the `.ics` and eventbrite links should work
+Use EventBrite to manage registrations and tickets, then link that event from this site:
+
+1. Create the event in EventBrite.
+2. In the EventBrite events list (draft or published), click the three dots next to your event and choose “Copy link”.
+3. In your `_events/<filename>.md` file, paste that URL into the `eventbrite_link` field in the YAML front‑matter.
+4. Commit and push. On deploy, the EventBrite link (and the generated `.ics` link for the current event) will be available on the site.
 
 ## Adding a new committee minute
 
