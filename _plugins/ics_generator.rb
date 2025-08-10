@@ -7,10 +7,30 @@ module Jekyll
 
     def generate(site)
       site.collections['events'].docs.each do |event|
-        next unless event.data['is_current'] == 'true' && event.data['date']
+        # Accept both boolean true and string 'true'
+        is_current = event.data['is_current'] == true || event.data['is_current'] == 'true'
+        next unless is_current && event.data['date']
 
         event_date = event.data['date']
-        start_time_str, end_time_str = event.data['time'].split(' - ')
+        # Support either a range "HH:MM - HH:MM" or a single start time
+        time_field = event.data['time']
+        start_time_str = nil
+        end_time_str = nil
+        if time_field && time_field.include?(' - ')
+          start_time_str, end_time_str = time_field.split(' - ')
+        elsif time_field
+          start_time_str = time_field
+          # Default to 2.5 hours duration if end time missing
+          begin
+            tmp_start = DateTime.parse("#{event.data['date']} #{start_time_str} +0000")
+            end_time_str = (tmp_start + Rational(150, 24*60)).strftime('%H:%M')
+          rescue
+            end_time_str = start_time_str
+          end
+        else
+          # Skip if no time
+          next
+        end
 
         start_datetime = DateTime.parse("#{event_date} #{start_time_str} +0000")
         end_datetime = DateTime.parse("#{event_date} #{end_time_str} +0000")

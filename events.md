@@ -5,7 +5,7 @@ title: Events
 
 # Current Event
 
-{% assign current_event = site.events | where: "is_current", "true" | first %}
+{% assign current_event = site.events | where_exp: "e", "e.is_current == true or e.is_current == 'true'" | first %}
 
 {% if current_event %}
 <div class="current-event-card">
@@ -26,7 +26,7 @@ title: Events
 
 # Previous Events
 
-{% assign past_events = site.events | where: "is_current", "false" | sort: "date" | reverse %}
+{% assign past_events = site.events | where_exp: "e", "e.is_current == false or e.is_current == 'false'" | sort: "date" | reverse %}
 {% if past_events.size > 0 %}
 <div class="past-events">
     {% for event in past_events %}

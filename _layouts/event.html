@@ -14,7 +14,7 @@ layout: default
             {% endif %}
         </div>
 
-        {% if page.is_current == "true" %}
+    {% if page.is_current == true or page.is_current == "true" %}
         <div class="event-actions">
             {% if page.calendar_link and page.calendar_link != "#" %}
             <a href="{{ page.calendar_link }}" class="btn btn-primary"><i class="fa-solid fa-calendar-plus"></i> Add to Calendar</a>
@@ -80,7 +80,8 @@ layout: default
 </article>
 
 <script>
-document.getElementById('download-pdf').addEventListener('click', function () {
+const downloadBtn = document.getElementById('download-pdf');
+if (downloadBtn) downloadBtn.addEventListener('click', function () {
     const element = document.getElementById('programme-content');
     const eventTitle = "{{ page.title | slugify }}";
     const opt = {
