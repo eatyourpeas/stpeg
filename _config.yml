@@ -8,6 +8,7 @@ url: "https://stpeg.org"
 markdown: kramdown
 highlighter: rouge
 theme: minima
+future: true
 
 # Collections
 collections:
