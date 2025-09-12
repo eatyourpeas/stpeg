@@ -61,8 +61,6 @@ sponsors:
     logo: "/assets/images/merck-logo.png"
   - name: "Neurocrine"
     logo: "/assets/images/neurocrine-logo.png"
-  - name: "Novo Nordisk"
-    logo: "/assets/images/novo-nordisk-logo.png"
 acknowledgements: "This meeting is multi-sponsored kindly by Merck Serono, Neurocrine in exchange for stand space. The sponsors have no influence on the academic agenda."
 ---
 
