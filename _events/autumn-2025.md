@@ -23,7 +23,7 @@ schedule:
   - time: "15:50"
     title: "70 years since we knew that humans have 46 chromosomes: the start of some big discoveries!! "
     speaker: "Dr Tony Hulse"
-    description: "--"
+    description: "Consultant Paediatric Endocrinologist, Evelina London Children's Hospital"
   - time: "16:40-17:00"
     title: "Tea / Coffee Break and display tour"
   - time: "17:00"
