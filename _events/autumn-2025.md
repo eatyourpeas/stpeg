@@ -51,7 +51,7 @@ schedule:
     speaker: "Dr Pooja Veerah "
     description: "Senior clinic fellow, paediatric endocrinology - University College London Hospital"
   - time: "18:40"
-    title: "Title to be announced"
+    title: "An extreme case of overgrowth!"
     speaker: "Dr Tony Hulse"
     description: "Consultant Paediatric Endocrinologist, Evelina London Children's Hospital"
   - time: "19:00"
