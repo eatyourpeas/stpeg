@@ -85,7 +85,7 @@ sponsors:
     logo: "/assets/images/esteve-logo.jpg"
   - name: "Dexcom"
     logo: "/assets/images/dexcom-logo.jpg"
-acknowledgements: "This meeting is multi-sponsored kindly by Merck Serono, Neurocrine, Novo Nordisk & Sandoz in exchange for stand space. The sponsors have no influence on the academic agenda."
+acknowledgements: "This meeting is multi-sponsored kindly by Merck Serono, Neurocrine, Novo Nordisk, Esteve, Dexcom & Sandoz in exchange for stand space. The sponsors have no influence on the academic agenda."
 ---
 
 Join us for the STPEG Autumn Meeting 2025 at Guy's Hospital, London. This afternoon and evening event brings together paediatric trainees, SAS, and paediatric consultants with special interest in endocrinology/diabetes from across the South Thames region.
