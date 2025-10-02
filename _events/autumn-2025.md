@@ -43,7 +43,7 @@ schedule:
     speaker: "Dr Roopa Vijiyan"
     description: "Senior clinical fellow, paediatric endocrinology - Evelina London Children's Hospital"
   - time: "17:45"
-     title: "A raging headache"
+    title: "A raging headache"
     speaker: "Dr Gowthami Krishnakumar"
     description: "ST4 - East Sussex Healthcare Foundation Trust"
   - time: "18:00"
