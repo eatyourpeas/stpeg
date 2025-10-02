@@ -48,7 +48,7 @@ schedule:
     description: "ST4 - East Sussex Healthcare Foundation Trust"
   - time: "18:00"
     title: "Pituitary stalk interruption syndrome"
-    speaker: "Dr Pooja Veerah "
+    speaker: "Dr Pooja Veeresh "
     description: "Senior clinic fellow, paediatric endocrinology - University College London Hospital"
   - time: "18:15"
     title: "To be anounced"
