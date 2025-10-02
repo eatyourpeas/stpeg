@@ -26,7 +26,7 @@ Presenting a case should take in 5 stages:
 ## Top Tips and General Style
 
 <div class="notice notice-important">
-<p>You have only 15 minutes. Structure the presentation so that every slide counts</p>
+<p>You have only 10 minutes. Structure the presentation so that every slide counts</p>
 </div>
 
 - Don't give the answer away in the title! This is a learning exercise for everyone, so tell an engaging story leading towards a conclusion.
@@ -43,4 +43,3 @@ Presenting a case should take in 5 stages:
 *For urgent speaker inquiries, please contact the current event host or STPEG coordinators.*
 
 ---
-
