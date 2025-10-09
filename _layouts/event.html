@@ -60,23 +60,23 @@ layout: default
             </div>
         </section>
         {% endif %}
-    </div>
 
-    {% if page.sponsors or page.acknowledgements %}
-    <section class="sponsors">
-        <h3>Acknowledgements</h3>
-        {% if page.sponsors %}
-        <div class="sponsor-logos">
-            {% for sponsor in page.sponsors %}
-            <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" class="sponsor-logo">
-            {% endfor %}
-        </div>
+        {% if page.sponsors or page.acknowledgements %}
+        <section class="sponsors">
+            <h3>Acknowledgements</h3>
+            {% if page.sponsors %}
+            <div class="sponsor-logos">
+                {% for sponsor in page.sponsors %}
+                <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" class="sponsor-logo">
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% if page.acknowledgements %}
+            <p>{{ page.acknowledgements }}</p>
+            {% endif %}
+        </section>
         {% endif %}
-        {% if page.acknowledgements %}
-        <p>{{ page.acknowledgements }}</p>
-        {% endif %}
-    </section>
-    {% endif %}
+    </div>
 </article>
 
 <script>

@@ -919,4 +919,60 @@ body {
     body {
         background: white;
     }
+    
+    /* Ensure sponsors section stays together and appears in PDF */
+    .sponsors {
+        page-break-inside: avoid;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e0e0e0;
+    }
+    
+    .sponsor-logos {
+        page-break-inside: avoid;
+        margin-bottom: 1rem;
+    }
+    
+    .sponsor-logo {
+        max-height: 40px;
+        width: auto;
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Ensure acknowledgements text stays with sponsor logos */
+    .sponsors p {
+        page-break-inside: avoid;
+        margin-top: 1rem;
+    }
+}
+
+/* HTML2PDF specific styles */
+.html2pdf__page-break {
+    page-break-before: always;
+}
+
+/* Force sponsors to appear in PDF generation */
+#programme-content .sponsors {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 2px solid #2980b9;
+}
+
+#programme-content .sponsor-logos {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+#programme-content .sponsor-logo {
+    max-height: 50px;
+    width: auto;
+    display: inline-block !important;
 }
