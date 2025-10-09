@@ -31,7 +31,7 @@ schedule:
   - time: "16:40-17:00"
     title: "Tea / Coffee Break and display tour"
   - time: "17:00"
-    title: "Lipodystrophy and severe insulin resistance"
+    title: "An unusual case of diabetes"
     speaker: "Dr Meriel Vaal (ST4 general paediatrics) - Kingston Hospital"
     description: ""
   - time: "17:15"
