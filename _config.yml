@@ -21,6 +21,8 @@ collections:
   meeting_minutes:
     output: true
     permalink: /:collection/:name/
+  alerts:
+    output: false
 
 # Defaults
 defaults:
