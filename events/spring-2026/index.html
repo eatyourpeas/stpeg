@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professor of Paediatric Endocrinology - STPEG</title>
+    <title>STPEG Spring Meeting 2026 - STPEG</title>
     <meta name="description" content="South Thames Paediatric Endocrine Group - Advancing paediatric endocrinology in South East England">
     <link rel="stylesheet" href="/assets/css/style.css">
     
@@ -53,49 +53,116 @@
 
     <main class="page-content">
         <div class="wrapper">
-            <article class="speaker">
-    <header class="speaker-header">
-        <h1>Prof. Michael Thompson</h1>
+            <article class="event-page">
+    <header class="event-header">
+        <h1>STPEG Spring Meeting 2026</h1>
+        <p class="event-date">Friday, April 24, 2026</p>
         
-        <p class="speaker-title">Professor of Paediatric Endocrinology</p>
+        <div class="event-details">
+            <p class="event-location"><strong>Location:</strong> Robens Suite, 29th Floor, Tower Wing, Guy's Hospital, Great Maze Pond, London, SE1 9RT</p>
+            
+                <p class="event-host"><strong>Host:</strong> TBA, TBA</p>
+            
+        </div>
+
+    
+    
+    
         
+        <div class="event-tba-notice">
+            <p><em><i class="fa-solid fa-calendar-clock"></i> Programme details and registration will be announced soon. Please check back for updates.</em></p>
+            <div class="event-actions">
+                <button id="download-pdf" class="btn btn-tertiary"><i class="fa-solid fa-file-pdf"></i> Download Programme</button>
+            </div>
+        </div>
         
-        <p class="speaker-hospital">Guy's Hospital, London</p>
-        
+    
     </header>
 
-    <div class="speaker-content">
-        <p>Professor Michael Thompson is a leading expert in paediatric endocrinology with over 20 years of clinical and research experience. He holds the Chair of Paediatric Endocrinology at Guy’s Hospital and is internationally recognized for his work in growth hormone therapy.</p>
+    <div class="event-content-wrapper" id="programme-content">
+        <div class="event-content">
+            <p>Join us for the STPEG Spring Meeting 2026 at Guy’s Hospital, London.</p>
 
-<p>Professor Thompson’s research has been instrumental in advancing our understanding of growth hormone deficiency and has contributed to several international treatment guidelines. He has authored over 150 peer-reviewed publications and has received numerous awards for his contributions to paediatric medicine.</p>
+<p><strong>Programme details will be announced soon.</strong></p>
 
-<p>He is committed to training the next generation of paediatric endocrinologists and regularly lectures at national and international conferences.</p>
+<h2 id="about-this-event">About This Event</h2>
 
-<h2 id="research-achievements">Research Achievements</h2>
+<p>This meeting will bring together paediatric trainees, SAS, and paediatric consultants with special interest in endocrinology/diabetes from across the South Thames region.</p>
+
+<p>Programme details, speaker information, and registration will be available in early 2026.</p>
+
+<h2 id="target-audience">Target Audience</h2>
 
 <ul>
-  <li>Lead investigator on multiple clinical trials for growth hormone therapy</li>
-  <li>Contributing author to international guidelines on growth disorders</li>
-  <li>Recipient of the European Society for Paediatric Endocrinology Research Award</li>
+  <li>Paediatric trainees</li>
+  <li>Specialty doctors (SAS)</li>
+  <li>Paediatric consultants with special interest in endocrinology/diabetes</li>
+  <li>Healthcare professionals in paediatric endocrinology</li>
 </ul>
 
-    </div>
+<h2 id="venue-details">Venue Details</h2>
 
-    
-    <section class="speaker-specialties">
-        <h3>Areas of Expertise</h3>
-        <ul>
+<p><strong>Robens Suite, 29th Floor, Tower Wing</strong><br />
+Guy’s Hospital<br />
+Great Maze Pond<br />
+London SE1 9RT</p>
+
+<p>For detailed directions and travel information, please see our <a href="../getting-there.html">Getting There</a> page.</p>
+
+        </div>
+
+        
+        <div class="html2pdf__page-break"></div>
+        <section class="schedule">
+            <h2>Programme</h2>
+            <div class="schedule-table">
+                
+                <div class="schedule-item">
+                    <div class="schedule-time">TBA</div>
+                    <div class="schedule-content">
+                        <strong>Programme details to be announced</strong>
+                        
+                        
+                        <br><small>Full programme will be published soon</small>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+
+        
+        <section class="sponsors">
+            <h3>Acknowledgements</h3>
             
-            <li>Growth hormone research</li>
+            <div class="sponsor-logos">
+                
+            </div>
             
-            <li>Bone metabolism</li>
             
-            <li>Genetic endocrine disorders</li>
+            <p>Sponsor information will be updated when available.</p>
             
-        </ul>
-    </section>
-    
+        </section>
+        
+    </div>
 </article>
+
+<script>
+const downloadBtn = document.getElementById('download-pdf');
+if (downloadBtn) downloadBtn.addEventListener('click', function () {
+    const element = document.getElementById('programme-content');
+    const eventTitle = "stpeg-spring-meeting-2026";
+    const opt = {
+        margin:       [0.5, 0.5, 0.5, 0.5],
+        filename:     `${eventTitle}-programme.pdf`,
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+    html2pdf().from(element).set(opt).save();
+});
+</script>
 
         </div>
     </main>
