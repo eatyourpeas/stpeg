@@ -4,6 +4,8 @@ This file provides a template for creating new STPEG events. Copy this template 
 
 **Filename format:** `season-year.md` (e.g., `spring-2026.md`, `autumn-2026.md`)
 
+**Note:** Event lifecycle (current/past status) is now automatically managed based on event dates. No manual `is_current` flags needed.
+
 ---
 
 ```yaml
@@ -14,9 +16,10 @@ time: "To be announced"  # Update with actual times when confirmed
 location: "Robens Suite, 29th Floor, Tower Wing, Guy's Hospital, Great Maze Pond, London, SE1 9RT"
 host_name: "To be announced"  # Update with actual host details
 host_hospital: "To be announced"  # Update with host's hospital/trust
-is_current: true  # Set to false for past events
 calendar_link: "#"  # Update with actual calendar link when available
 eventbrite_link: "#"  # Update with actual booking link when available
+# For placeholder events (details not yet confirmed), add:
+# status: "to-be-announced"
 schedule:
   - time: "TBC"
     title: "Registration and Coffee/Tea and networking"
@@ -105,24 +108,27 @@ This event provides continuing professional development for all attendees. Certi
    - Actual host details when confirmed
    - Programme schedule
    - Sponsor information
-5. **Set `is_current`** appropriately:
-   - `true` for the upcoming/current event
-   - `false` for past events
-6. **Update content sections** with event-specific information
+   - Add `status: "to-be-announced"` for placeholder events where details aren't yet confirmed
+5. **Update content sections** with event-specific information
+
+**Note:** The website automatically determines current/past status based on event dates. No manual flags needed.
 
 ## Key Fields to Update
 
 ### YAML Frontmatter
+
 - `title`: Event title
-- `date`: Event date (YYYY-MM-DD format)
+- `date`: Event date (YYYY-MM-DD format) - **Critical for automation**
 - `time`: Event timing
 - `host_name`: Event host(s)
 - `host_hospital`: Host institution
 - `schedule`: Complete programme
 - `sponsors`: Sponsor details
 - `acknowledgements`: Sponsor acknowledgements
+- `status`: Add `"to-be-announced"` for placeholder events
 
 ### Content Sections
+
 - Event description
 - Programme highlights
 - Registration information
@@ -134,3 +140,13 @@ This event provides continuing professional development for all attendees. Certi
 - **Autumn meetings:** 2nd Friday in October
 
 Use online date calculators to determine exact dates for future years.
+
+## Automated Features
+
+Once published, the website will automatically:
+
+- Feature the event as "current" if it's the next upcoming event
+- Move the event to "Past Events" section after the date passes
+- Disable registration links for past events
+- Generate placeholder events for next seasons as needed
+- Display appropriate messaging for TBA events
