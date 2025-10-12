@@ -14,6 +14,51 @@ The South Thames Paediatric Endocrine Group organises biannual conferences atten
 - **Getting There**: Travel information for conference venues
 - **Responsive Design**: Mobile-friendly interface
 - **Professional Styling**: Medical, professional, child and family-friendly design
+- **Automated Event Management**: Smart event lifecycle handling (see below)
+
+## Automated Event Management
+
+⚠️ **Important**: Event closing and lifecycle management is now **fully automated** based on event dates. No manual intervention is required.
+
+### How It Works
+
+The website includes an intelligent event automation system (`_plugins/event_automation.rb`) that automatically:
+
+1. **Detects Current Events**: Identifies which event should be featured as "current" based on dates
+2. **Archives Past Events**: Automatically moves events to the "Past Events" section when their date passes
+3. **Disables Registration**: Removes Eventbrite and calendar download links for past events
+4. **Generates Placeholders**: Creates "To Be Announced" entries for the next season when no future events are scheduled
+5. **Maintains Continuity**: Ensures the site always displays meaningful content
+
+### Event States
+
+The system recognizes three event states:
+
+- **Current Event**: The next upcoming event, or most recent if no future events exist
+- **Past Events**: Events whose dates have passed (automatically archived)
+- **TBA Events**: Placeholder events for future seasons marked with `status: "to-be-announced"`
+
+### What This Means for Content Management
+
+- **No more manual `is_current` flags**: The system ignores these and uses date-based logic instead
+- **Automatic transitions**: Events move to past status without any file edits
+- **Smart fallbacks**: If no future events exist, the system generates next season placeholders
+- **Professional presentation**: Past events show "Event has concluded" notices; TBA events show appropriate messaging
+
+### Technical Details
+
+The automation is powered by:
+- Custom Jekyll plugin with Liquid filters
+- Date comparison logic that runs on every build
+- Season detection (Spring/Autumn) for intelligent placeholder generation
+- CSS styling for different event states
+
+### Benefits
+
+- **Zero maintenance**: Events automatically transition without manual updates
+- **Always current**: Site never shows outdated "current" events
+- **Professional appearance**: Appropriate messaging and link states for all event types
+- **Future-proof**: Automatically handles upcoming seasons and scheduling gaps
 
 ## Local Development
 
@@ -56,6 +101,11 @@ Configuration notes:
 Create a new file in `_events/` with the following format:
 
 ```yaml
+### New Events
+
+Create a new file in `_events/` with the following format:
+
+```yaml
 ---
 title: "Event Title"
 date: YYYY-MM-DD
@@ -63,7 +113,6 @@ time: "9:00 AM - 5:00 PM"
 location: "Venue Name"
 host_name: "Dr. Name"
 host_hospital: "Hospital Name"
-is_current: true/false
 calendar_link: "link-to-calendar"
 eventbrite_link: "link-to-eventbrite"
 schedule:
@@ -73,6 +122,68 @@ schedule:
     speaker_link: "/speakers/speaker-slug"
 ---
 Event description in markdown...
+```
+
+**Note**: The `is_current` field is no longer needed. Events are automatically managed based on their date.
+
+#### Steps
+
+Follow these steps to add a new event that builds its own page and appears in the listings.
+
+##### 1. Name the file (controls the URL)
+
+In the `_events/` folder, create a new markdown file named like `spring-2026.md` or `autumn-2026.md`.
+The URL will be `/events/<filename-without-extension>/` (e.g. `spring-2026.md` → `/events/spring-2026/`).
+Changing the event date later will NOT change the URL.
+
+##### 2. Start from the template
+
+Open `_utils/event-template.md` and copy the YAML front‑matter and content skeleton into your new file.
+
+##### 3. Fill out the YAML front‑matter
+
+Required fields and guidance:
+
+- `title`: A clear event title.
+- `date`: In `YYYY-MM-DD` format. Convention: Spring = 4th Friday in April; Autumn = 2nd Friday in October.
+- `time`: Either a range like `"14:30 - 21:00"` or `"2:30 PM - 9:00 PM"`. A single start time also works.
+- `location`: Full venue details.
+- `host_name`, `host_hospital`: Host info for the event.
+- `eventbrite_link` (optional but recommended): Paste the Eventbrite link. In Eventbrite, open your event's draft list, click the three dots, and select "Copy link".
+- `calendar_link`: Leave as `#` or omit. The site will auto‑generate an `.ics` link for the current event during the build.
+- `schedule`: Add programme items. You can include optional `speaker_link` fields that point to speaker pages (e.g., `/speakers/jane-doe`).
+
+**Automated fields** (no longer needed):
+- ~~`is_current`~~: Events are automatically detected as current/past based on their date.
+
+##### 4. Add the page content
+
+Below the YAML, add a brief event description, highlights, and any notes attendees should know.
+
+##### 5. Commit and push
+
+Commit the new file to `main`. The site will build and:
+
+- Automatically determine if the event is current or past based on its date.
+- Feature the most appropriate event on `/events.html` (next upcoming, or most recent if none upcoming).
+- Generate an `.ics` file for the current event at `/assets/ics/<filename>.ics` and link it automatically.
+- Disable registration links for past events automatically.
+
+##### 6. Optional: Creating placeholder events
+
+For future seasons where details aren't yet known, create an event with:
+```yaml
+status: "to-be-announced"
+```
+This will display appropriate "TBA" messaging and styling.
+
+##### 7. No maintenance required
+
+Once events are created, the system will:
+- Automatically move past events to the "Past Events" section
+- Disable registration links when events conclude
+- Generate next season placeholders as needed
+- Always display the most relevant current event
 ```
 
 #### Steps
