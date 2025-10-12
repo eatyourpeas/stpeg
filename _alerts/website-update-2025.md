@@ -2,7 +2,7 @@
 title: "Welcome to the New STPEG Website"
 subtitle: "Updated with automated event management"
 published_date: 2025-10-12
-end_date: 2025-12-31
+end_date: 2025-10-11
 type: "info"
 priority: 1
 ---
