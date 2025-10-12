@@ -5,7 +5,7 @@ time: "2:30 PM - 9:00 PM"
 location: "Robens Suite, 29th Floor, Tower Wing, Guy's Hospital, Great Maze Pond, London, SE1 9RT"
 host_name: "Dr Charlotte Jackson"
 host_hospital: "Kingston Hospital"
-is_current: "true"
+is_current: "false"
 calendar_link: "#"
 eventbrite_link: "https://www.eventbrite.co.uk/e/1542862837279?aff=oddtdtcreator"
 schedule:

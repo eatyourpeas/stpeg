@@ -14,17 +14,35 @@ layout: default
             {% endif %}
         </div>
 
-    {% if page.is_current == true or page.is_current == "true" %}
+    {% assign links_disabled = page | should_disable_event_links %}
+    {% assign is_tba = page | event_is_tba %}
+    {% unless links_disabled %}
         <div class="event-actions">
             {% if page.calendar_link and page.calendar_link != "#" %}
             <a href="{{ page.calendar_link }}" class="btn btn-primary"><i class="fa-solid fa-calendar-plus"></i> Add to Calendar</a>
             {% endif %}
-            {% if page.eventbrite_link %}
+            {% if page.eventbrite_link and page.eventbrite_link != "#" %}
             <a href="{{ page.eventbrite_link }}" class="btn btn-secondary"><i class="fa-solid fa-ticket"></i> Register on Eventbrite</a>
             {% endif %}
             <button id="download-pdf" class="btn btn-tertiary"><i class="fa-solid fa-file-pdf"></i> Download Programme</button>
         </div>
+    {% else %}
+        {% if is_tba %}
+        <div class="event-tba-notice">
+            <p><em><i class="fa-solid fa-calendar-clock"></i> Programme details and registration will be announced soon. Please check back for updates.</em></p>
+            <div class="event-actions">
+                <button id="download-pdf" class="btn btn-tertiary"><i class="fa-solid fa-file-pdf"></i> Download Programme</button>
+            </div>
+        </div>
+        {% else %}
+        <div class="event-past-notice">
+            <p><em><i class="fa-solid fa-info-circle"></i> This event has concluded. Registration and calendar links are no longer active.</em></p>
+            <div class="event-actions">
+                <button id="download-pdf" class="btn btn-tertiary"><i class="fa-solid fa-file-pdf"></i> Download Programme</button>
+            </div>
+        </div>
         {% endif %}
+    {% endunless %}
     </header>
 
     <div class="event-content-wrapper" id="programme-content">
