@@ -93,7 +93,67 @@ module Jekyll
       return true if event.data['status'] == 'to-be-announced'
       false
     end
-    
+
+    # ALERT MANAGEMENT FUNCTIONS
+
+    # Get active alerts (within date range and not expired)
+    def get_active_alerts(alerts)
+      return [] unless alerts && alerts.length > 0
+      
+      current_date = Date.today
+      
+      active = alerts.select do |alert|
+        published_date = alert.data['published_date']
+        end_date = alert.data['end_date']
+        
+        # Must have both dates
+        next false unless published_date && end_date
+        
+        # Convert to Date objects if they aren't already
+        published_date = published_date.to_date if published_date.respond_to?(:to_date)
+        end_date = end_date.to_date if end_date.respond_to?(:to_date)
+        
+        # Must be currently active (published and not expired)
+        published_date <= current_date && end_date >= current_date
+      end
+      
+      # Sort by priority (lower numbers = higher priority), then by published date (newest first)
+      active.sort_by { |a| [a.data['priority'] || 999, -(a.data['published_date'].to_date.to_time.to_i)] }
+    end
+
+    # Check if alert is currently active
+    def alert_is_active?(alert)
+      return false unless alert && alert.data['published_date'] && alert.data['end_date']
+      
+      current_date = Date.today
+      published_date = alert.data['published_date'].to_date
+      end_date = alert.data['end_date'].to_date
+      
+      published_date <= current_date && end_date >= current_date
+    end
+
+    # Get alert icon class based on type
+    def get_alert_icon(type)
+      case type.to_s.downcase
+      when 'info'
+        'fa-info-circle'
+      when 'warning'
+        'fa-exclamation-triangle'
+      when 'error', 'danger'
+        'fa-exclamation-circle'
+      when 'success'
+        'fa-check-circle'
+      else
+        'fa-info-circle'  # default
+      end
+    end
+
+    # Format alert date for display
+    def format_alert_date(date)
+      return '' unless date
+      date.strftime("%B %d, %Y")
+    end
+
   end
 end
 

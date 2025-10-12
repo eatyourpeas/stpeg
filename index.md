@@ -15,6 +15,33 @@ title: "STPEG - South Thames Paediatric Endocrine Group"
     </div>
 </div>
 
+<!-- Alert System -->
+{% assign active_alerts = site.alerts | get_active_alerts %}
+{% if active_alerts.size > 0 %}
+<section class="alerts-container">
+    {% for alert in active_alerts %}
+    <div class="alert alert-{{ alert.type }}">
+        <div class="alert-icon">
+            <i class="fa-solid {{ alert.type | get_alert_icon }}"></i>
+        </div>
+        <div class="alert-content">
+            <div class="alert-header">
+                <h3 class="alert-title">{{ alert.title }}</h3>
+                {% if alert.subtitle %}
+                <p class="alert-subtitle">{{ alert.subtitle }} • {{ alert.published_date | format_alert_date }}</p>
+                {% else %}
+                <p class="alert-subtitle">{{ alert.published_date | format_alert_date }}</p>
+                {% endif %}
+            </div>
+            <div class="alert-message">
+                {{ alert.content }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% endif %}
+
 <section class="about-section">
     <h2>Who We Are</h2>
     <p>The South Thames Paediatric Endocrine Group (STPEG) organises a biannual conference attended by approximately 100 healthcare professionals who work in paediatric endocrinology across hospitals in South East England.</p>

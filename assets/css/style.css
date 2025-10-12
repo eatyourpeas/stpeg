@@ -298,6 +298,141 @@ body {
     font-size: 0.95rem;
 }
 
+/* Alert System Styles */
+.alerts-container {
+    margin-bottom: 2rem;
+}
+
+.alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.alert:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.alert-icon {
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.alert-content {
+    flex: 1;
+}
+
+.alert-header {
+    margin-bottom: 0.5rem;
+}
+
+.alert-title {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0 0 0.25rem 0;
+    line-height: 1.3;
+}
+
+.alert-subtitle {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin: 0;
+    font-style: italic;
+}
+
+.alert-message {
+    margin: 0;
+}
+
+.alert-message p {
+    margin-bottom: 0.75rem;
+}
+
+.alert-message p:last-child {
+    margin-bottom: 0;
+}
+
+.alert-message ul, .alert-message ol {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.alert-message li {
+    margin-bottom: 0.25rem;
+}
+
+/* Alert Type Variations */
+.alert.alert-info {
+    background-color: #e3f2fd;
+    border-left-color: #2196f3;
+    color: #0d47a1;
+}
+
+.alert.alert-info .alert-icon {
+    color: #2196f3;
+}
+
+.alert.alert-success {
+    background-color: #e8f5e8;
+    border-left-color: #4caf50;
+    color: #2e7d2e;
+}
+
+.alert.alert-success .alert-icon {
+    color: #4caf50;
+}
+
+.alert.alert-warning {
+    background-color: #fff8e1;
+    border-left-color: #ff9800;
+    color: #e65100;
+}
+
+.alert.alert-warning .alert-icon {
+    color: #ff9800;
+}
+
+.alert.alert-error, .alert.alert-danger {
+    background-color: #ffebee;
+    border-left-color: #f44336;
+    color: #c62828;
+}
+
+.alert.alert-error .alert-icon, .alert.alert-danger .alert-icon {
+    color: #f44336;
+}
+
+/* Responsive Alert Styles */
+@media (max-width: 768px) {
+    .alert {
+        padding: 1rem;
+        gap: 0.75rem;
+    }
+    
+    .alert-icon {
+        font-size: 1.25rem;
+    }
+    
+    .alert-title {
+        font-size: 1rem;
+    }
+    
+    .alert-subtitle {
+        font-size: 0.8rem;
+    }
+}
+
 /* Event Page Styles */
 .event-page .event-header {
     background: white;

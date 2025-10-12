@@ -60,6 +60,78 @@ The automation is powered by:
 - **Professional appearance**: Appropriate messaging and link states for all event types
 - **Future-proof**: Automatically handles upcoming seasons and scheduling gaps
 
+## Alert System
+
+⚠️ **Important**: Alert display and lifecycle management is **fully automated** based on publication and end dates. No manual intervention is required.
+
+### How It Works
+
+The website includes an intelligent alert system that automatically displays important notices, updates, and announcements on the homepage. The system:
+
+1. **Date-Based Display**: Shows alerts only within their active date range
+2. **Automatic Expiry**: Removes alerts when their end date passes
+3. **Priority Sorting**: Orders alerts by priority level and publication date
+4. **Type-Based Styling**: Applies appropriate colors and icons based on alert type
+5. **Responsive Design**: Ensures alerts display well on all devices
+
+### Alert Types
+
+The system supports four alert types with distinct styling:
+
+- **Info** (Blue): General information, updates, announcements
+- **Success** (Green): Positive news, completions, achievements  
+- **Warning** (Orange): Important notices, changes, upcoming deadlines
+- **Error/Danger** (Red): Critical issues, cancellations, urgent matters
+
+### Creating Alerts
+
+Alerts are stored in the `_alerts/` collection and use standard Jekyll Markdown format:
+
+```yaml
+---
+title: "Alert Title"
+subtitle: "Optional subtitle"
+published_date: YYYY-MM-DD
+end_date: YYYY-MM-DD
+type: "info"  # info, success, warning, error/danger
+priority: 1   # Lower numbers = higher priority
+---
+Alert content in **Markdown** format.
+```
+
+### Alert Lifecycle
+
+- **Automatic Display**: Alerts appear on homepage when `published_date` is reached
+- **Automatic Removal**: Alerts disappear when `end_date` passes
+- **No Manual Management**: System handles all timing automatically
+- **Date Validation**: Only alerts with valid date ranges are shown
+
+### Priority System
+
+- **1-3**: Critical/urgent (errors, cancellations)
+- **4-6**: Important notices (deadlines, changes)
+- **7-9**: General information (updates, announcements)  
+- **10+**: Low priority notices
+
+Alerts are sorted by priority (lowest number first), then by publication date (newest first).
+
+### Technical Implementation
+
+The alert system is powered by:
+- Custom Jekyll collection (`_alerts/`)
+- Extended automation plugin with alert filtering functions
+- CSS classes for each alert type with appropriate styling
+- Font Awesome icons for visual clarity
+- Responsive design for mobile compatibility
+
+### Benefits
+
+- **Always Current**: Only relevant alerts are displayed
+- **Professional Presentation**: Consistent styling and appropriate urgency levels
+- **Zero Maintenance**: Alerts automatically appear and disappear based on dates
+- **Flexible Content**: Full Markdown support for rich content
+- **Mobile Friendly**: Responsive design works on all devices
+
 ## Local Development
 
 To run this site locally:
@@ -246,6 +318,38 @@ specialties:
 ---
 Biography in markdown...
 ```
+
+### New Alerts
+
+Create a new file in `_alerts/` with:
+
+```yaml
+---
+title: "Alert Title"
+subtitle: "Optional subtitle"
+published_date: YYYY-MM-DD  # When alert should start showing
+end_date: YYYY-MM-DD        # When alert should stop showing
+type: "info"                # Options: info, success, warning, error/danger
+priority: 1                 # Lower numbers = higher priority
+---
+Alert content in **Markdown** format...
+```
+
+#### Alert Creation Steps
+
+1. **Choose filename**: Use descriptive name with date (e.g., `meeting-update-2025-10-15.md`)
+2. **Set dates carefully**: 
+   - `published_date`: When alert should appear
+   - `end_date`: When alert should disappear
+3. **Choose appropriate type**:
+   - `info`: General updates, announcements
+   - `success`: Positive news, achievements  
+   - `warning`: Important notices, deadlines
+   - `error`/`danger`: Critical issues, cancellations
+4. **Set priority**: Lower numbers show first (1 = highest priority)
+5. **Write clear content**: Use Markdown for formatting
+
+**Important**: Use the template in `_utils/alert-template.md` for detailed guidance and examples.
 
 ### Custom Ruby Gem
 
