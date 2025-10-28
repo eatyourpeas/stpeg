@@ -7,7 +7,7 @@ type: "info"
 priority: 2
 ---
 
-**Regional Survey of all South Thames and the South East Paediatric Endocrine Services**
+## Regional Survey of all South Thames and the South East Paediatric Endocrine Services
 
 Tell us about your paediatric endocrine service:
 
@@ -16,4 +16,4 @@ Tell us about your paediatric endocrine service:
 - Dynamic test protocols (which do you use?)
 - Tertiary referral pathways (who do you refer to?)
 
-**[Fill out the survey]([#](https://docs.google.com/forms/d/1QWi-PAYtGcZnW77jrNcaPgnXcIEBwo6_uI_4HmK92wY/viewform?edit_requested=true))** to tell us about your service.
+**[Fill out the survey](https://docs.google.com/forms/d/1QWi-PAYtGcZnW77jrNcaPgnXcIEBwo6_uI_4HmK92wY/viewform?edit_requested=true)** to tell us about your service.

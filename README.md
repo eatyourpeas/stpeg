@@ -48,6 +48,7 @@ The system recognizes three event states:
 ### Technical Details
 
 The automation is powered by:
+
 - Custom Jekyll plugin with Liquid filters
 - Date comparison logic that runs on every build
 - Season detection (Spring/Autumn) for intelligent placeholder generation
