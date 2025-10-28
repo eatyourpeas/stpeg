@@ -1,5 +1,5 @@
 ---
-title: "Announcement"
+title: "Tribute"
 subtitle: ""
 published_date: 2025-10-28
 end_date: 2025-12-31
