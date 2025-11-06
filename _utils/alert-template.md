@@ -16,6 +16,8 @@ published_date: YYYY-MM-DD  # When the alert should start showing
 end_date: YYYY-MM-DD        # When the alert should stop showing
 type: "info"                # Options: info, success, warning, error/danger
 priority: 1                 # Lower numbers = higher priority (1 = highest, 999 = lowest)
+image: "/assets/images/example.png"  # Optional image path relative to site root
+image_alt: "Descriptive alt text"     # Optional alt text (defaults to title)
 ---
 
 Your alert message content goes here in **Markdown format**.
@@ -39,7 +41,9 @@ Keep messages concise but informative for the best user experience.
    - `published_date`: When alert should start appearing (YYYY-MM-DD)
    - `end_date`: When alert should stop appearing (YYYY-MM-DD)
    - `type`: Alert type (determines styling and icon)
-   - `priority`: Display order (1 = highest priority)
+  - `image`: Optional image path (under `assets/images/`) shown instead of the icon
+  - `image_alt`: Optional alt text for accessibility (defaults to title)
+  - `priority`: Display order (1 = highest priority)
 4. **Write the alert content** in Markdown format below the frontmatter
 5. **Commit and push** - the alert will automatically appear on the homepage
 
@@ -106,6 +110,8 @@ published_date: 2025-10-12
 end_date: 2025-11-30
 type: "info"
 priority: 5
+image: "/assets/images/example.png"
+image_alt: "Example image description"
 ---
 ```
 

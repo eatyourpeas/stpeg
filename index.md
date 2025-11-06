@@ -21,8 +21,12 @@ title: "STPEG - South Thames Paediatric Endocrine Group"
 <section class="alerts-container">
     {% for alert in active_alerts %}
     <div class="alert alert-{{ alert.type }}">
-        <div class="alert-icon">
+        <div class="alert-media{% if alert.image %} has-image{% endif %}">
+            {% if alert.image %}
+            <img src="{{ alert.image | relative_url }}" alt="{{ alert.image_alt | default: alert.title }}">
+            {% else %}
             <i class="fa-solid {{ alert.type | get_alert_icon }}"></i>
+            {% endif %}
         </div>
         <div class="alert-content">
             <div class="alert-header">

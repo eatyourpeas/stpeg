@@ -96,6 +96,8 @@ published_date: YYYY-MM-DD
 end_date: YYYY-MM-DD
 type: "info"  # info, success, warning, error/danger
 priority: 1   # Lower numbers = higher priority
+image: "/assets/images/example.png"  # Optional image path relative to site root
+image_alt: "Descriptive alt text"     # Optional (defaults to title)
 ---
 Alert content in **Markdown** format.
 ```
@@ -339,7 +341,7 @@ Alert content in **Markdown** format...
 #### Alert Creation Steps
 
 1. **Choose filename**: Use descriptive name with date (e.g., `meeting-update-2025-10-15.md`)
-2. **Set dates carefully**: 
+2. **Set dates carefully**:
    - `published_date`: When alert should appear
    - `end_date`: When alert should disappear
 3. **Choose appropriate type**:
@@ -347,8 +349,9 @@ Alert content in **Markdown** format...
    - `success`: Positive news, achievements  
    - `warning`: Important notices, deadlines
    - `error`/`danger`: Critical issues, cancellations
-4. **Set priority**: Lower numbers show first (1 = highest priority)
-5. **Write clear content**: Use Markdown for formatting
+4. **Optional image**: Add `image` (path under `assets/images/...`) and `image_alt`
+5. **Set priority**: Lower numbers show first (1 = highest priority)
+6. **Write clear content**: Use Markdown for formatting
 
 **Important**: Use the template in `_utils/alert-template.md` for detailed guidance and examples.
 
