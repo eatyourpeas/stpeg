@@ -5,6 +5,8 @@ published_date: 2025-10-28
 end_date: 2025-12-31
 type: "info"
 priority: 1
+image: "/assets/images/mike_ryalls.png"
+image_alt: "Dr Mike Ryalls"
 ---
 
 ***In memory of Dr Mike Ryalls MB BCh MRCP(UK) FRCPCH***
