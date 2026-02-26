@@ -3,11 +3,11 @@ title: "STPEG Spring Meeting 2026"
 date: 2026-04-24
 time: "2:30 PM - 9:00 PM"
 location: "Robens Suite, 29th Floor, Tower Wing, Guy's Hospital, Great Maze Pond, London, SE1 9RT"
-host_name: "To be anounced"
-host_hospital: "To be anounced"
+host_name: "Dr Sarrah El Munshid"
+host_hospital: "East Surrey Hospital"
 is_current: "true"
 calendar_link: "#"
-eventbrite_link: "#"
+eventbrite_link: "https://www.eventbrite.co.uk/e/south-thames-paediatric-group-spring-2026-registration-1984053600729?aff=oddtdtcreator"
 status: "to-be-announced"
 schedule:
   - time: "14:30-14:50"
@@ -64,7 +64,7 @@ schedule:
     speaker: "To be announced"
     description: ""
   - time: "19:15"
-    title: "Business and Updates"
+    title: "Presentation of the Mike Ryalls prize"
     speaker: "Dr Tony Hulse"
     description: "Consultant Paediatric Endocrinologist, Maidstone, STPEG Committee"
   - time: "19:30-21:00"
@@ -74,8 +74,6 @@ acknowledgements: "Sponsor information will be updated when available."
 ---
 
 Join us for the STPEG Spring Meeting 2026 at Guy's Hospital, London. 
-
-**Programme details will be announced soon.**
 
 ## About This Event
 
