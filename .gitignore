@@ -20,3 +20,6 @@ Gemfile.lock
 # Temporary files
 *~
 *.log
+
+# Generated ICS files
+assets/ics/*.ics

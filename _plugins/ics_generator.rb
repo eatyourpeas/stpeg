@@ -53,8 +53,8 @@ module Jekyll
         END:VCALENDAR
         ICS
 
-        # Create a file for the ICS
-        ics_dir = File.join(site.dest, 'assets', 'ics')
+        # Create a file for the ICS in the source directory so Jekyll picks it up
+        ics_dir = File.join(site.source, 'assets', 'ics')
         FileUtils.mkdir_p(ics_dir) unless Dir.exist?(ics_dir)
         
         ics_filename = "#{File.basename(event.path, '.md')}.ics"
