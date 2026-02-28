@@ -8,7 +8,7 @@ host_hospital: "East Surrey Hospital"
 is_current: "true"
 calendar_link: "#"
 eventbrite_link: "https://www.eventbrite.co.uk/e/south-thames-paediatric-group-spring-2026-registration-1984053600729?aff=oddtdtcreator"
-status: "to-be-announced"
+status: "published"
 schedule:
   - time: "14:30-14:50"
     title: "Registration and Coffee/Tea and networking and Stand tours"
