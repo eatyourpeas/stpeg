@@ -160,7 +160,21 @@ end
 # Register hook to populate current event data
 Jekyll::Hooks.register :site, :pre_render do |site|
   events = site.collections['events'].docs
-  current_event = Jekyll::EventAutomation.get_current_event(events)
+  return unless events && events.length > 0
+  
+  # Find current event (marked as current or next upcoming)
+  current_event = events.find do |e|
+    (e.data['is_current'] == true || e.data['is_current'] == 'true') && 
+    e.data['date'] && e.data['date'] >= Time.now
+  end
+  
+  # If no current marked event, get next upcoming event by date
+  unless current_event
+    current_event = events
+      .select { |e| e.data['date'] && e.data['date'] >= Time.now }
+      .min_by { |e| e.data['date'] }
+  end
+  
   site.data['current_event'] = current_event.data if current_event
 end
 
