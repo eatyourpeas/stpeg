@@ -121,6 +121,7 @@ Alerts are sorted by priority (lowest number first), then by publication date (n
 ### Technical Implementation
 
 The alert system is powered by:
+
 - Custom Jekyll collection (`_alerts/`)
 - Extended automation plugin with alert filtering functions
 - CSS classes for each alert type with appropriate styling
@@ -229,6 +230,7 @@ Required fields and guidance:
 - `schedule`: Add programme items. You can include optional `speaker_link` fields that point to speaker pages (e.g., `/speakers/jane-doe`).
 
 **Automated fields** (no longer needed):
+
 - ~~`is_current`~~: Events are automatically detected as current/past based on their date.
 
 ##### 4. Add the page content
@@ -247,18 +249,22 @@ Commit the new file to `main`. The site will build and:
 ##### 6. Optional: Creating placeholder events
 
 For future seasons where details aren't yet known, create an event with:
+
 ```yaml
 status: "to-be-announced"
 ```
+
 This will display appropriate "TBA" messaging and styling.
 
 ##### 7. No maintenance required
 
 Once events are created, the system will:
+
 - Automatically move past events to the "Past Events" section
 - Disable registration links when events conclude
 - Generate next season placeholders as needed
 - Always display the most relevant current event
+
 ```
 
 #### Steps

@@ -18,7 +18,7 @@ host_name: "To be announced"  # Update with actual host details
 host_hospital: "To be announced"  # Update with host's hospital/trust
 calendar_link: "#"  # Update with actual calendar link when available
 eventbrite_link: "#"  # Update with actual booking link when available
-# For placeholder events (details not yet confirmed), add:
+# For placeholder events (details not yet confirmed), add - this will disable any links:
 # status: "to-be-announced"
 schedule:
   - time: "TBC"

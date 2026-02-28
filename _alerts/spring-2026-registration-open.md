@@ -16,4 +16,4 @@ Join us for another excellent meeting featuring:
 - Networking opportunities with regional colleagues
 - Professional development credits
 
-**[Register on Eventbrite](#)** to secure your place. Early bird rates available until February 2026.
+**[Register on Eventbrite](#)** to secure your place.
