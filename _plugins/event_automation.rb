@@ -46,7 +46,11 @@ module Jekyll
     # Check if an event is in the past
     def event_is_past?(event)
       return false unless event && event.data['date']
-      event.data['date'] < Time.now
+      event_date = event.data['date']
+      # Convert to Date if it's a Time object
+      event_date = event_date.to_date if event_date.is_a?(Time)
+      # Compare as dates
+      event_date < Date.today
     end
     
     # Get current event (not past, marked as current, or next upcoming)
@@ -82,16 +86,31 @@ module Jekyll
     end
     
     # Check if event links should be disabled (past events or TBA events)
-    def should_disable_event_links?(event)
-      return true if event_is_past?(event)
-      return true if event.data['status'] == 'to-be-announced'
-      false
+    def should_disable_event_links(event)
+      # Handle Jekyll::Drops::DocumentDrop (from Liquid)
+      status = event['status'].to_s.downcase.strip
+      date_val = event['date']
+      
+      past = is_event_past(date_val)
+      is_tba = (status == 'to-be-announced')
+      
+      past || is_tba
     end
     
     # Check if an event should show TBA message instead of action buttons
-    def event_is_tba?(event)
-      return true if event.data['status'] == 'to-be-announced'
-      false
+    def event_is_tba(event)
+      status = event['status'].to_s.downcase.strip
+      status == 'to-be-announced'
+    end
+    
+    # Helper to check if a date is in the past (works with DocumentDrop date values)
+    def is_event_past(date_val)
+      return false unless date_val
+      event_date = date_val
+      # Convert to Date if it's a Time object
+      event_date = event_date.to_date if event_date.is_a?(Time)
+      # Compare as dates
+      event_date < Date.today
     end
 
     # ALERT MANAGEMENT FUNCTIONS
