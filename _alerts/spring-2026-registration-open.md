@@ -16,4 +16,4 @@ Join us for another excellent meeting featuring:
 - Networking opportunities with regional colleagues
 - Professional development credits
 
-**[Register on Eventbrite](#)** to secure your place.
+**[Register on Eventbrite]({{ site.data.current_event.eventbrite_link }})** to secure your place.

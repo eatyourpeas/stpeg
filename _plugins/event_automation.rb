@@ -157,4 +157,11 @@ module Jekyll
   end
 end
 
+# Register hook to populate current event data
+Jekyll::Hooks.register :site, :pre_render do |site|
+  events = site.collections['events'].docs
+  current_event = Jekyll::EventAutomation.get_current_event(events)
+  site.data['current_event'] = current_event.data if current_event
+end
+
 Liquid::Template.register_filter(Jekyll::EventAutomation)
