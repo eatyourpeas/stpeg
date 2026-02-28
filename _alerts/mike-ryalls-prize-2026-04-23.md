@@ -1,7 +1,7 @@
 ---
 title: "Prize"
 subtitle: "Best case presentation judged by the STPEG Committee"
-published_date: 2026-03-01
+published_date: 2026-02-28
 end_date: 2026-04-30
 type: "info"
 priority: 1
