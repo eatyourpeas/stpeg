@@ -33,11 +33,11 @@ schedule:
     title: "Tea / Coffee Break and display tour"
   - time: "17:00"
     title: "Beyond the usual suspects - Part A"
-    speaker: "Dr Roopa Vijayan"
+    speaker: "Alisha, Romeesa, Dr Roopa Vijayan"
     description: ""
   - time: "17:15"
     title: "Beyond the usual suspects - Part B"
-    speaker: "Dr Roopa Vijayan"
+    speaker: "Alisha, Romeesa, Dr Roopa Vijayan"
     description: ""
   - time: "17:30"
     title: "Grave's Disease"
@@ -57,7 +57,7 @@ schedule:
     description: ""
   - time: "18:30"
     title: "Break"
-    speaker: "To be announced"
+    speaker: "Deliberation and Drinks"
     description: ""
   - time: "18:50"
     title: "Presentation of the Mike Ryalls prize"
@@ -69,8 +69,10 @@ schedule:
     description: "Consultant Paediatrician, East Surrey and Sussex"
   - time: "19:00-21:00"
     title: "Drinks reception and Dinner on site"
-sponsors: []
-acknowledgements: "Sponsor information will be updated when available."
+sponsors: 
+  - name: "Novo Nordisk"
+    logo: "/assets/images/novo-nordisk-logo.png"
+acknowledgements: "This meeting is sponsored kindly by Novo Nordisk in exchange for stand space. The sponsors have no influence on the academic agenda."
 ---
 
 Join us for the STPEG Spring Meeting 2026 at Guy's Hospital, London. 
