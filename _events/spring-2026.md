@@ -75,7 +75,7 @@ sponsors:
   - name: "Esteve"
     logo: "/assets/images/esteve-logo.png"
   - name: "Diurnal"
-    logo: "/assets/images/diurnal-logo.jpeg"
+    logo: "/assets/images/diurnal-logo.jpg"
   - name: "Novo Nordisk"
     logo: "/assets/images/novo-nordisk-logo.png"
 acknowledgements: "This meeting is sponsored kindly by Novo Nordisk, Merck, Esteve and Diurnal in exchange for stand space. The sponsors have no influence on the academic agenda."
