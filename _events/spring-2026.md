@@ -70,10 +70,10 @@ schedule:
   - time: "19:00-21:00"
     title: "Drinks reception and Dinner on site"
 sponsors: 
-- name: "Merck Serono"
+  - name: "Merck Serono"
     logo: "/assets/images/merck-logo.png"
   - name: "Esteve"
-    logo: "/assets/images/esteve-logo.png"
+    logo: "/assets/images/esteve-logo.jpg"
   - name: "Diurnal"
     logo: "/assets/images/diurnal-logo.jpg"
   - name: "Novo Nordisk"
