@@ -70,9 +70,15 @@ schedule:
   - time: "19:00-21:00"
     title: "Drinks reception and Dinner on site"
 sponsors: 
+- name: "Merck Serono"
+    logo: "/assets/images/merck-logo.png"
+  - name: "Esteve"
+    logo: "/assets/images/esteve-logo.png"
+  - name: "Diurnal"
+    logo: "/assets/images/diurnal-logo.jpeg"
   - name: "Novo Nordisk"
     logo: "/assets/images/novo-nordisk-logo.png"
-acknowledgements: "This meeting is sponsored kindly by Novo Nordisk in exchange for stand space. The sponsors have no influence on the academic agenda."
+acknowledgements: "This meeting is sponsored kindly by Novo Nordisk, Merck, Esteve and Diurnal in exchange for stand space. The sponsors have no influence on the academic agenda."
 ---
 
 Join us for the STPEG Spring Meeting 2026 at Guy's Hospital, London. 
