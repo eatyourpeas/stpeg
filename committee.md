@@ -21,5 +21,11 @@ The organising committee meets twice a year.
 
 ## Meeting Dates
 
-- [28 July, 2025](/meeting_minutes/2025-07-28)
-- [8th January, 2025](/meeting_minutes/2025-01-08)
+{% assign sorted_minutes = site.meeting_minutes | sort: 'url' | reverse %}
+{% if sorted_minutes.size > 0 %}
+{% for minute in sorted_minutes %}
+- [{{ minute.title | replace: "STPEG Committee Meeting Minutes - ", "" }}]({{ minute.url | relative_url }})
+{% endfor %}
+{% else %}
+- Meeting dates will be published soon.
+{% endif %}
