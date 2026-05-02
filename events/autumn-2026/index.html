@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback - Host Pack - STPEG</title>
+    <title>STPEG Autumn Meeting 2026 - STPEG</title>
     <meta name="description" content="South Thames Paediatric Endocrine Group - Advancing paediatric endocrinology in South East England">
     <link rel="stylesheet" href="/assets/css/style.css">
     
@@ -53,45 +53,103 @@
 
     <main class="page-content">
         <div class="wrapper">
-            <h1 id="event-feedback">Event Feedback</h1>
+            <article class="event-page">
+    <header class="event-header">
+        <h1>STPEG Autumn Meeting 2026</h1>
+        <p class="event-date">Friday, October 09, 2026</p>
+        
+        <div class="event-details">
+            <p class="event-location"><strong>Location:</strong> Robens Suite, 29th Floor, Tower Wing, Guy's Hospital, Great Maze Pond, London, SE1 9RT</p>
+            
+                <p class="event-host"><strong>Host:</strong> To be announced, To be announced</p>
+            
+        </div>
 
-<h2 id="feedback-collection">Feedback Collection</h2>
+    
+    
+    
+        
+        <div class="event-tba-notice">
+            <p><em><i class="fa-solid fa-calendar-clock"></i> Programme details and registration will be announced soon. Please check back for updates.</em></p>
+            <div class="event-actions">
+                <button id="download-pdf" class="btn btn-tertiary"><i class="fa-solid fa-file-pdf"></i> Download Programme</button>
+            </div>
+        </div>
+        
+    
+    </header>
 
-<p>Please scan the QR code below to access our feedback form:</p>
+    <div class="event-content-wrapper" id="programme-content">
+        <div class="event-content">
+            <p>Join us for the STPEG Autumn Meeting 2026 at Guy’s Hospital, London.</p>
 
-<div class="qr-code-container">
-    <img src="/assets/images/qr-placeholder.png" alt="QR Code for Feedback Form" class="qr-code" />
-    <p><strong>Scan to provide feedback</strong></p>
-    <p><em>QR code will link to Google Sheets form</em></p>
-</div>
+<h2 id="about-this-event">About This Event</h2>
 
-<h2 id="alternative-access">Alternative Access</h2>
+<p>This meeting will bring together paediatric trainees, SAS, and paediatric consultants with special interest in endocrinology/diabetes from across the South Thames region.</p>
 
-<p>If you cannot scan the QR code, please visit: <a href="https://forms.google.com/placeholder">Feedback Form</a></p>
+<p>Programme details, speaker information, and registration will be announced soon.</p>
 
-<h2 id="why-your-feedback-matters">Why Your Feedback Matters</h2>
+<h2 id="target-audience">Target Audience</h2>
 
-<p>Your feedback helps us:</p>
 <ul>
-  <li>Improve future STPEG conferences</li>
-  <li>Better understand delegate needs</li>
-  <li>Plan relevant content and speakers</li>
-  <li>Enhance the overall experience</li>
+  <li>Paediatric trainees</li>
+  <li>Specialty doctors (SAS)</li>
+  <li>Paediatric consultants with special interest in endocrinology/diabetes</li>
+  <li>Healthcare professionals in paediatric endocrinology</li>
 </ul>
 
-<h2 id="what-we-ask-about">What We Ask About</h2>
+<h2 id="venue-details">Venue Details</h2>
 
-<ul>
-  <li>Overall event satisfaction</li>
-  <li>Speaker quality and relevance</li>
-  <li>Venue and facilities</li>
-  <li>Catering and refreshments</li>
-  <li>Networking opportunities</li>
-  <li>Suggestions for future topics</li>
-  <li>Areas for improvement</li>
-</ul>
+<p><strong>Robens Suite, 29th Floor, Tower Wing</strong><br />
+Guy’s Hospital<br />
+Great Maze Pond<br />
+London SE1 9RT</p>
 
-<p>Thank you for taking the time to provide your feedback!</p>
+<p>For detailed directions and travel information, please see our <a href="../getting-there.html">Getting There</a> page.</p>
+
+        </div>
+
+        
+        <div class="html2pdf__page-break"></div>
+        <section class="schedule">
+            <h2>Programme</h2>
+            <div class="schedule-table">
+                
+            </div>
+        </section>
+        
+
+        
+        <section class="sponsors">
+            <h3>Acknowledgements</h3>
+            
+            <div class="sponsor-logos">
+                
+            </div>
+            
+            
+            <p></p>
+            
+        </section>
+        
+    </div>
+</article>
+
+<script>
+const downloadBtn = document.getElementById('download-pdf');
+if (downloadBtn) downloadBtn.addEventListener('click', function () {
+    const element = document.getElementById('programme-content');
+    const eventTitle = "stpeg-autumn-meeting-2026";
+    const opt = {
+        margin:       [0.5, 0.5, 0.5, 0.5],
+        filename:     `${eventTitle}-programme.pdf`,
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+    html2pdf().from(element).set(opt).save();
+});
+</script>
 
         </div>
     </main>
