@@ -372,16 +372,103 @@ London SE1 9RT</p>
 <script>
 const downloadBtn = document.getElementById('download-pdf');
 if (downloadBtn) downloadBtn.addEventListener('click', function () {
-    const element = document.getElementById('programme-content');
-    const eventTitle = "stpeg-spring-meeting-2025";
+    // Create a container for PDF content that includes header and programme
+    const pdfContainer = document.createElement('div');
+    pdfContainer.style.padding = '0.5in';
+    pdfContainer.style.width = '100%';
+    pdfContainer.style.backgroundColor = 'white';
+    
+    // Add STPEG header/logo
+    const headerDiv = document.createElement('div');
+    headerDiv.style.textAlign = 'center';
+    headerDiv.style.marginBottom = '1rem';
+    headerDiv.style.paddingBottom = '1rem';
+    headerDiv.style.borderBottom = '2px solid #2980b9';
+    
+    const logo = document.createElement('img');
+    logo.src = "/assets/images/logo.png";
+    logo.alt = 'STPEG Logo';
+    logo.style.height = '60px';
+    logo.style.marginRight = '0.5rem';
+    logo.style.display = 'inline-block';
+    
+    const titleSpan = document.createElement('span');
+    titleSpan.style.display = 'inline-block';
+    titleSpan.style.verticalAlign = 'middle';
+    
+    const orgTitle = document.createElement('div');
+    orgTitle.style.fontSize = '18px';
+    orgTitle.style.fontWeight = 'bold';
+    orgTitle.style.color = '#2980b9';
+    orgTitle.textContent = 'STPEG';
+    
+    const orgSubtitle = document.createElement('div');
+    orgSubtitle.style.fontSize = '12px';
+    orgSubtitle.style.color = '#555';
+    orgSubtitle.textContent = 'South Thames Paediatric Endocrine Group';
+    
+    titleSpan.appendChild(orgTitle);
+    titleSpan.appendChild(orgSubtitle);
+    headerDiv.appendChild(logo);
+    headerDiv.appendChild(titleSpan);
+    pdfContainer.appendChild(headerDiv);
+    
+    // Add event header info
+    const eventHeader = document.createElement('div');
+    eventHeader.style.marginBottom = '1.5rem';
+    
+    const eventTitle = document.createElement('h1');
+    eventTitle.style.margin = '0 0 0.5rem 0';
+    eventTitle.style.fontSize = '24px';
+    eventTitle.style.color = '#2980b9';
+    eventTitle.textContent = "STPEG Spring Meeting 2025";
+    
+    const eventDate = document.createElement('p');
+    eventDate.style.margin = '0.25rem 0';
+    eventDate.style.fontSize = '14px';
+    eventDate.style.fontWeight = 'bold';
+    eventDate.textContent = "Friday, April 25, 2025";
+    
+    const eventLocation = document.createElement('p');
+    eventLocation.style.margin = '0.25rem 0';
+    eventLocation.style.fontSize = '13px';
+    eventLocation.textContent = "📍 Robens Suite, 29th Floor, Tower Wing, Guy's Hospital, Great Maze Pond, London, SE1 9RT";
+    
+    const eventHost = document.createElement('p');
+    eventHost.style.margin = '0.25rem 0';
+    eventHost.style.fontSize = '13px';
+    eventHost.textContent = "👤 Host: Dr Aileen Alston and Dr Aruna Goturu, Epsom and St Helier University Hospitals NHS Trust";
+    
+    eventHeader.appendChild(eventTitle);
+    eventHeader.appendChild(eventDate);
+    eventHeader.appendChild(eventLocation);
+    eventHeader.appendChild(eventHost);
+    pdfContainer.appendChild(eventHeader);
+    
+    // Add page break and programme content
+    const pageBreak = document.createElement('div');
+    pageBreak.className = 'html2pdf__page-break';
+    pdfContainer.appendChild(pageBreak);
+    
+    // Clone the programme content
+    const programmeContent = document.getElementById('programme-content');
+    if (programmeContent) {
+        const programmClone = programmeContent.cloneNode(true);
+        programmClone.style.width = '100%';
+        pdfContainer.appendChild(programmClone);
+    }
+    
+    const eventTitle_slug = "stpeg-spring-meeting-2025";
     const opt = {
-        margin:       [0.5, 0.5, 0.5, 0.5],
-        filename:     `${eventTitle}-programme.pdf`,
+        margin:       [0.3, 0.3, 0.3, 0.3],
+        filename:     `${eventTitle_slug}-programme.pdf`,
         image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true },
+        html2canvas:  { scale: 2, useCORS: true, allowTaint: true },
         jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
     };
-    html2pdf().from(element).set(opt).save();
+    
+    html2pdf().from(pdfContainer).set(opt).save();
+    pdfContainer.remove();
 });
 </script>
 
@@ -393,8 +480,8 @@ if (downloadBtn) downloadBtn.addEventListener('click', function () {
             <div class="footer-content">
                 <p>&copy; 2026 STPEG. All rights reserved.</p>
                 <div class="footer-meta">
-                    <p>Last updated: May 02, 2026</p>
-                    <p>Build: <code>4bf2145</code></p>
+                    <p>Last updated: May 06, 2026</p>
+                    <p>Build: <code>38b1ff2</code></p>
                 </div>
             </div>
         </div>
