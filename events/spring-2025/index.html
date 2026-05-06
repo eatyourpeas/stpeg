@@ -122,7 +122,6 @@ London SE1 9RT</p>
         </div>
 
         
-        <div class="html2pdf__page-break"></div>
         <section class="schedule">
             <h2>Programme</h2>
             <div class="schedule-table">
@@ -374,7 +373,7 @@ const downloadBtn = document.getElementById('download-pdf');
 if (downloadBtn) downloadBtn.addEventListener('click', function () {
     // Create a container for PDF content that includes header and programme
     const pdfContainer = document.createElement('div');
-    pdfContainer.style.padding = '0.5in';
+    pdfContainer.style.padding = '0';
     pdfContainer.style.width = '100%';
     pdfContainer.style.backgroundColor = 'white';
     
@@ -415,7 +414,7 @@ if (downloadBtn) downloadBtn.addEventListener('click', function () {
     
     // Add event header info
     const eventHeader = document.createElement('div');
-    eventHeader.style.marginBottom = '1.5rem';
+    eventHeader.style.marginBottom = '0.75rem';
     
     const eventTitle = document.createElement('h1');
     eventTitle.style.margin = '0 0 0.5rem 0';
@@ -445,17 +444,20 @@ if (downloadBtn) downloadBtn.addEventListener('click', function () {
     eventHeader.appendChild(eventHost);
     pdfContainer.appendChild(eventHeader);
     
-    // Add page break and programme content
-    const pageBreak = document.createElement('div');
-    pageBreak.className = 'html2pdf__page-break';
-    pdfContainer.appendChild(pageBreak);
-    
     // Clone the programme content
     const programmeContent = document.getElementById('programme-content');
     if (programmeContent) {
-        const programmClone = programmeContent.cloneNode(true);
-        programmClone.style.width = '100%';
-        pdfContainer.appendChild(programmClone);
+        const programmeClone = programmeContent.cloneNode(true);
+        programmeClone.style.width = '100%';
+
+        // Remove legacy forced breaks and let html2pdf paginate naturally.
+        programmeClone.querySelectorAll('.html2pdf__page-break').forEach((el) => el.remove());
+
+        // Ensure content starts at the top without inherited heading/paragraph top offset.
+        const firstBlock = programmeClone.querySelector('.event-content > *:first-child');
+        if (firstBlock) firstBlock.style.marginTop = '0';
+
+        pdfContainer.appendChild(programmeClone);
     }
     
     const eventTitle_slug = "stpeg-spring-meeting-2025";
@@ -464,6 +466,10 @@ if (downloadBtn) downloadBtn.addEventListener('click', function () {
         filename:     `${eventTitle_slug}-programme.pdf`,
         image:        { type: 'jpeg', quality: 0.98 },
         html2canvas:  { scale: 2, useCORS: true, allowTaint: true },
+        pagebreak:    {
+            mode: ['css', 'legacy'],
+            avoid: ['.schedule-item', '.sponsors', '.sponsor-logos']
+        },
         jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
     };
     
@@ -481,7 +487,7 @@ if (downloadBtn) downloadBtn.addEventListener('click', function () {
                 <p>&copy; 2026 STPEG. All rights reserved.</p>
                 <div class="footer-meta">
                     <p>Last updated: May 06, 2026</p>
-                    <p>Build: <code>38b1ff2</code></p>
+                    <p>Build: <code>56f7e00</code></p>
                 </div>
             </div>
         </div>

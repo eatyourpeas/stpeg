@@ -1206,6 +1206,16 @@ body {
     body {
         background: white;
     }
+
+    .event-content h2,
+    .event-content h3,
+    .schedule h2 {
+        page-break-after: avoid;
+    }
+
+    .schedule-item {
+        page-break-inside: avoid;
+    }
     
     /* Ensure sponsors section stays together and appears in PDF */
     .sponsors {
@@ -1262,4 +1272,22 @@ body {
     max-height: 50px;
     width: auto;
     display: inline-block !important;
+}
+
+#programme-content .event-content h2,
+#programme-content .event-content h3,
+#programme-content .schedule h2 {
+    break-after: avoid-page;
+    margin-top: 1rem;
+}
+
+#programme-content .event-content > :first-child {
+    margin-top: 0 !important;
+}
+
+#programme-content .schedule-item,
+#programme-content .sponsors,
+#programme-content .sponsor-logos {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
 }
