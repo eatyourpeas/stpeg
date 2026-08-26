@@ -6,7 +6,7 @@ title: "STPEG - South Thames Paediatric Endocrine Group"
 <div class="hero-section">
     <div class="hero-grid">
         <div class="hero-logo-container">
-            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="STPEG Logo" class="hero-logo">
+            <img src="{{ '/assets/images/stpeg_30.png' | relative_url }}" alt="STPEG Logo" class="hero-logo">
         </div>
         <div class="hero-text-container">
             <h1 class="hero-title">STPEG</h1>
