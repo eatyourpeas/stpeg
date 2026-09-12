@@ -2,7 +2,7 @@
 title: "Registration Now Open"
 subtitle: "Autumn 2026 Meeting"
 published_date: 2026-09-12
-end_date: 2026-10-9
+end_date: 2026-10-09
 type: "success"
 priority: 3
 ---
