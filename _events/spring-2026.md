@@ -68,7 +68,7 @@ schedule:
     speaker: "Dr Sarrah El-Munshid"
     description: "Consultant Paediatrician, East Surrey and Sussex"
   - time: "19:00-21:00"
-    title: "Refreshments"
+    title: "Refreshments and Networking"
 sponsors: 
   - name: "Merck Serono"
     logo: "/assets/images/merck-logo.png"
