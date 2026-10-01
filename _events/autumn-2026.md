@@ -61,7 +61,7 @@ schedule:
     description: ""
   - time: "18:30"
     title: "Break"
-    speaker: "Deliberation and Drinks"
+    speaker: "Deliberation"
     description: ""
   - time: "18:50"
     title: "Presentation of the Mike Ryalls prize"
@@ -72,7 +72,7 @@ schedule:
     speaker: "Dr Nadia Muhi-Iddin"
     description: "Consultant Paediatrician, East Sussex Hospitals"
   - time: "19:00-21:00"
-    title: "Drinks reception and Dinner on site"
+    title: "Networking and Dinner on site"
 sponsors: 
   - name: "Esteve"
     logo: "/assets/images/esteve-logo.jpg"
