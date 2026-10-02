@@ -88,7 +88,7 @@ sponsors:
     logo: "/assets/images/merck-logo.png"
   - name: "Dexcom"
     logo: "/assets/images/dexcom-logo.jpg"
-acknowledgements: "This meeting is sponsored kindly by Esteve and Imedica in exchange for stand space. The sponsors have no influence on the academic agenda."
+acknowledgements: "This meeting is sponsored kindly by Esteve, Imedica, Novo Nordisk, Merck and Dexcom in exchange for stand space. The sponsors have no influence on the academic agenda."
 ---
 
 Join us for the STPEG Autumn Meeting 2026 at Guy's Hospital, London.
