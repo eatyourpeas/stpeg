@@ -83,11 +83,11 @@ sponsors:
   - name: "Immedica"
     logo: "/assets/images/immedica-logo.png"
   - name: "Novo"
-    logo: "/assets/images/novo-logo.png"
+    logo: "/assets/images/novo-nordisk-logo.png"
   - name: "Merck"
     logo: "/assets/images/merck-logo.png"
   - name: "Dexcom"
-    logo: "/assets/images/dexcom-logo.png"
+    logo: "/assets/images/dexcom-logo.jpg"
 acknowledgements: "This meeting is sponsored kindly by Esteve and Imedica in exchange for stand space. The sponsors have no influence on the academic agenda."
 ---
 
