@@ -60,7 +60,7 @@ schedule:
     speaker: "Dr. Nidhi Mathews"
     description: "Senior Clinical Fellow PaediatricsBarking, Havering and Redbridge University Hospitals."
   - time: "18:30"
-    title: "Managing advanced bone age in congenital adrenal hyperplasia."
+    title: "A short story about a tall boy"
     speaker: "Dr Olivia Stredder"
     description: "Paediatric Endocrinology registrar, King's College Hospital"
   - time: "18:45"
