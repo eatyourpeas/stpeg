@@ -52,7 +52,7 @@ schedule:
     speaker: "Dr Chhaya Patankar"
     description: "Maidstone and Tunbridge Wells Hospital"
   - time: "18:00"
-    title: "Avise please"
+    title: "Advice please"
     speaker: "Talia Augustine"
     description: "GPST. East Sussex Hospital"
   - time: "18:15"
