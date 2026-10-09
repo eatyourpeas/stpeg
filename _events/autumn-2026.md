@@ -58,7 +58,7 @@ schedule:
   - time: "18:15"
     title: "The Brittle Truth"
     speaker: "Dr. Nidhi Mathews"
-    description: "Senior Clinical Fellow PaediatricsBarking, Havering and Redbridge University Hospitals."
+    description: "Senior Clinical Fellow Paediatrics, Barking, Havering and Redbridge University Hospitals."
   - time: "18:30"
     title: "A short story about a tall boy"
     speaker: "Dr Olivia Stredder"
