@@ -53,7 +53,7 @@ schedule:
     description: "Maidstone and Tunbridge Wells Hospital"
   - time: "18:00"
     title: "Advice please"
-    speaker: "Talia Augustine"
+    speaker: "Dr Talia Augustine"
     description: "GPST. East Sussex Hospital"
   - time: "18:15"
     title: "The Brittle Truth"
