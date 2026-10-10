@@ -7,11 +7,9 @@ type: "info"
 priority: 3
 ---
 
-#### STPEG Governance
-
 Following the presentation at the Autumn meeting, STPEG delegates are invited to feed back to the committee on the future governance structure and funding arrangements they would like to see.
 
-##### Governance Structure Option
+##### Governance Structure Options
 
 - No Change - remain as an *Unincorporated Association*
 - Form a *Community Interest Company*
