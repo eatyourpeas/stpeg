@@ -11,8 +11,8 @@ Following the presentation at the Autumn meeting, STPEG delegates are invited to
 
 ##### Governance Structure Options
 
-- No Change - remain as an *Unincorporated Association*
-- Form a *Community Interest Company*
+- No Change - remain as an **Unincorporated Association**
+- Form a **Community Interest Company**
 
 ##### Funding Options
 
@@ -20,4 +20,4 @@ Following the presentation at the Autumn meeting, STPEG delegates are invited to
 - Membership model: annual standing order
 - Hybrid: membership model with ticketing for adhoc attendees
 
-If you views you wish to be included in the decision, please email us at [committee@stpeg.org](mailto:committee@stpeg.org)
+If you you want your views to be included in the decision, please email us at [committee@stpeg.org](mailto:committee@stpeg.org)
